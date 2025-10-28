@@ -235,7 +235,7 @@ export const FunlingoProductSection = (): React.JSX.Element => {
         </button>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-up {
           0% {
             opacity: 0;

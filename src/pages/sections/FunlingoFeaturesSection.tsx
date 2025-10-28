@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
 
 const features = [
@@ -273,7 +273,7 @@ export const FunlingoFeaturesSection = (): React.JSX.Element => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-up {
           0% {
             opacity: 0;

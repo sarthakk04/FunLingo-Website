@@ -5,7 +5,23 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
 import { Star, Quote } from "lucide-react";
 
-const testimonialsData = [
+// Define types for our data
+interface Testimonial {
+  id: number;
+  quote: string;
+  name: string;
+  role: string;
+  avatar: string;
+  size: "small" | "large";
+}
+
+interface TestimonialCardProps {
+  testimonial: Testimonial;
+  index: number;
+  isActive: boolean;
+}
+
+const testimonialsData: Testimonial[] = [
   {
     id: 1,
     quote:
@@ -56,7 +72,7 @@ const testimonialsData = [
 export const FunlingoTestimonialsSection = (): React.JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -135,7 +151,6 @@ export const FunlingoTestimonialsSection = (): React.JSX.Element => {
                 <TestimonialCard
                   testimonial={testimonial}
                   index={index}
-                  isVisible={isVisible}
                   isActive={index === activeTestimonial}
                 />
               </div>
@@ -173,7 +188,6 @@ export const FunlingoTestimonialsSection = (): React.JSX.Element => {
               key={testimonial.id}
               testimonial={testimonial}
               index={index}
-              isVisible={isVisible}
               isActive={true}
             />
           ))}
@@ -190,7 +204,6 @@ export const FunlingoTestimonialsSection = (): React.JSX.Element => {
               key={testimonial.id}
               testimonial={testimonial}
               index={index + 2}
-              isVisible={isVisible}
               isActive={true}
             />
           ))}
@@ -224,7 +237,7 @@ export const FunlingoTestimonialsSection = (): React.JSX.Element => {
         ))}
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-up {
           0% {
             opacity: 0;
@@ -257,7 +270,11 @@ export const FunlingoTestimonialsSection = (): React.JSX.Element => {
 };
 
 // Separate Testimonial Card Component for better reusability
-const TestimonialCard = ({ testimonial, index, isVisible, isActive }) => {
+const TestimonialCard: React.FC<TestimonialCardProps> = ({
+  testimonial,
+  index,
+  isActive,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -324,7 +341,7 @@ const TestimonialCard = ({ testimonial, index, isVisible, isActive }) => {
         </div>
 
         {/* Hover Gradient Border Effect */}
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#73d0b9] to-[#0091bd] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm group-hover:blur-md"></div>
+        <div className="absolute inset-0 rounded  -xl bg-gradient-to-r from-[#73d0b9] to-[#0091bd] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm group-hover:blur-md"></div>
         <div className="absolute inset-[1px] rounded-xl bg-[rgba(0,0,0,0.9)] -z-10 backdrop-blur-sm"></div>
       </CardContent>
     </Card>

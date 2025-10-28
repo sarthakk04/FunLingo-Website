@@ -485,7 +485,7 @@ export const About = (): React.JSX.Element => {
         </div>
       </main>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-down {
           0% {
             opacity: 0;

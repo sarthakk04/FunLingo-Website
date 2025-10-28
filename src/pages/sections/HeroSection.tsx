@@ -127,7 +127,7 @@ export const HeroSection = (): React.JSX.Element => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-up {
           0% {
             opacity: 0;

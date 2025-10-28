@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
 
-
 const progressItems = [
   {
     title: "Contextual Learning",
@@ -165,7 +164,7 @@ export const WhyChooseFunlingoSection = (): React.JSX.Element => {
         ))}
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-up {
           0% {
             opacity: 0;

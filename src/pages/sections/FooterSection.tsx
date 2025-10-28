@@ -248,7 +248,7 @@ export const FooterSection = (): React.JSX.Element => {
         ↑
       </button>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-up {
           0% {
             opacity: 0;

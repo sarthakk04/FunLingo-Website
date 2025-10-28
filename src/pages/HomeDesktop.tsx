@@ -9,13 +9,13 @@ import { WhyChooseFunlingoSection } from "./sections/WhyChooseFunlingoSection";
 import logo from "../assets/logo.png";
 import { useState, useEffect } from "react";
 
-const navItems = [
-  { label: "Home", href: "/", active: true },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Roadmap", href: "/roadmap" },
-  { label: "Feedback", href: "/feedback" },
-  { label: "About", href: "/about" },
-];
+// const navItems = [
+//   { label: "Home", href: "/", active: true },
+//   { label: "Pricing", href: "/pricing" },
+//   { label: "Roadmap", href: "/roadmap" },
+//   { label: "Feedback", href: "/feedback" },
+//   { label: "About", href: "/about" },
+// ];
 
 const featureBadges = [
   {
@@ -213,7 +213,7 @@ export const HomeDesktop = (): React.JSX.Element => {
       <FunlingoTestimonialsSection />
       <FooterSection />
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-down {
           0% {
             opacity: 0;
