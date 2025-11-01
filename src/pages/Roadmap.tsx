@@ -7,7 +7,7 @@ import { Check, Clock, Star, Rocket, Target, Zap } from "lucide-react";
 
 const roadmapItems = [
   {
-    quarter: "Q1 2024",
+    quarter: "Q1 2025",
     status: "Completed",
     icon: <Check className="w-5 h-5" />,
     theme: "success",
@@ -31,7 +31,7 @@ const roadmapItems = [
     ],
   },
   {
-    quarter: "Q2 2024",
+    quarter: "Q2 2025",
     status: "Completed",
     icon: <Check className="w-5 h-5" />,
     theme: "success",
@@ -55,7 +55,7 @@ const roadmapItems = [
     ],
   },
   {
-    quarter: "Q3 2024",
+    quarter: "Q3 2025",
     status: "In Progress",
     icon: <Zap className="w-5 h-5" />,
     theme: "active",
@@ -79,7 +79,7 @@ const roadmapItems = [
     ],
   },
   {
-    quarter: "Q4 2024",
+    quarter: "Q4 2025",
     status: "Planned",
     icon: <Target className="w-5 h-5" />,
     theme: "planned",
@@ -164,37 +164,37 @@ export const Roadmap = (): React.JSX.Element => {
   const getStatusColor = (status: string) => {
     switch (status) {
       case "Completed":
-        return "bg-brandlime-green text-black";
+        return "bg-[rgba(198,66,252,0.2)] text-[#C642FC] border border-[#C642FC]/30";
       case "In Progress":
-        return "bg-brandblue-light text-textwhite";
+        return "bg-[rgba(198,66,252,0.3)] text-white border border-[#C642FC]";
       case "Planned":
-        return "bg-[rgba(255,255,255,0.1)] text-textwhite";
+        return "bg-[rgba(255,255,255,0.1)] text-textwhite border border-[#ffffff1a]";
       default:
-        return "bg-[rgba(255,255,255,0.1)] text-textwhite";
+        return "bg-[rgba(255,255,255,0.1)] text-textwhite border border-[#ffffff1a]";
     }
   };
 
   const getThemeColor = (theme: string) => {
     switch (theme) {
       case "success":
-        return "border-brandlime-green bg-[rgba(115,208,185,0.05)]";
+        return "border-[#C642FC] bg-[rgba(198,66,252,0.05)]";
       case "active":
-        return "border-brandblue-light bg-[rgba(2,91,207,0.1)]";
+        return "border-[#C642FC] bg-[rgba(198,66,252,0.1)]";
       case "planned":
-        return "border-[#ffffff1a] bg-[rgba(255,255,255,0.05)]";
+        return "border-[#7A1CAC] bg-[rgba(122,28,172,0.05)]";
       case "future":
-        return "border-[#ffffff1a] bg-[rgba(255,255,255,0.05)]";
+        return "border-[#7A1CAC] bg-[rgba(122,28,172,0.05)]";
       default:
         return "border-[#ffffff1a] bg-[rgba(255,255,255,0.05)]";
     }
   };
 
   return (
-    <div className="flex flex-col items-start relative bg-[linear-gradient(180deg,#000000_0%,#0a1628_50%,#025bcf_100%)] min-h-screen">
+    <div className="flex flex-col items-start relative bg-[linear-gradient(180deg,#000000_0%,#1a0a28_50%,#7A1CAC_100%)] min-h-screen">
       {/* Navigation Header */}
       <header
         className={`relative self-stretch w-full h-16 bg-[rgba(0,0,0,0.8)] backdrop-blur-[15px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(15px)_brightness(100%)] border-b border-[#ffffff1a] sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "shadow-2xl shadow-blue-500/20" : ""
+          isScrolled ? "shadow-2xl shadow-purple-500/20" : ""
         }`}
       >
         <div className="flex items-center justify-between h-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,10 +203,10 @@ export const Roadmap = (): React.JSX.Element => {
             href="/"
             className="animate-fade-in-down hover:scale-105 transition-transform duration-300"
           >
-            <h1 className="relative flex items-center justify-center w-fit bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,rgba(115,208,185,1)_40%,rgba(0,145,189,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)]">
+            <h1 className="relative flex items-center justify-center w-fit bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,#C642FC_40%,#7A1CAC_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)]">
               <img
                 src={logo}
-                width={55}
+                width={120}
                 alt="Funlingo Logo"
                 className="drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
               />
@@ -232,7 +232,7 @@ export const Roadmap = (): React.JSX.Element => {
               >
                 {item.label}
                 <span
-                  className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] transition-all duration-300 group-hover:w-full ${
+                  className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] transition-all duration-300 group-hover:w-full ${
                     item.active ? "w-full" : ""
                   }`}
                 ></span>
@@ -245,11 +245,11 @@ export const Roadmap = (): React.JSX.Element => {
             className="hidden md:block animate-fade-in-down"
             style={{ animationDelay: "700ms" }}
           >
-            <Button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-10 px-5 py-2 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 group overflow-hidden relative">
+            <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-10 px-5 py-2 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group overflow-hidden relative">
               <span className="relative z-10 flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textwhite text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)]">
                 Download Extension
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0091bd] to-[#025bcf] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
           </div>
 
@@ -301,11 +301,11 @@ export const Roadmap = (): React.JSX.Element => {
               >
                 {item.label}
                 {item.active && (
-                  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] rounded-full"></span>
+                  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] rounded-full"></span>
                 )}
               </a>
             ))}
-            <Button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 mt-4">
+            <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 mt-4">
               <span className="relative flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textwhite text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)]">
                 Download Extension
               </span>
@@ -356,13 +356,13 @@ export const Roadmap = (): React.JSX.Element => {
               >
                 {/* Quarter Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4 group">
-                  <h3 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-xl sm:text-2xl lg:text-[length:var(--heading-h3-font-size)] tracking-[var(--heading-h3-letter-spacing)] leading-[var(--heading-h3-line-height)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-500">
+                  <h3 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-xl sm:text-2xl lg:text-[length:var(--heading-h3-font-size)] tracking-[var(--heading-h3-letter-spacing)] leading-[var(--heading-h3-line-height)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-500">
                     {quarter.quarter}
                   </h3>
                   <Badge
                     className={`w-fit transition-all duration-500 group-hover:scale-110 ${getStatusColor(
                       quarter.status
-                    )} border-0`}
+                    )}`}
                   >
                     <span className="font-body-xs-medium">
                       {quarter.status}
@@ -379,7 +379,7 @@ export const Roadmap = (): React.JSX.Element => {
                         quarter.theme
                       )} ${
                         quarter.status === "In Progress" && item.highlight
-                          ? "shadow-lg shadow-blue-500/20"
+                          ? "shadow-lg shadow-purple-500/20"
                           : ""
                       }`}
                     >
@@ -387,18 +387,18 @@ export const Roadmap = (): React.JSX.Element => {
                         <div
                           className={`w-5 h-5 rounded-full border-2 flex items-center justify-center mt-1 transition-all duration-500 group-hover/item:scale-110 ${
                             item.completed
-                              ? "border-brandlime-green bg-brandlime-green"
-                              : "border-textbody group-hover/item:border-textwhite"
+                              ? "border-[#C642FC] bg-[#C642FC]"
+                              : "border-textbody group-hover/item:border-[#C642FC]"
                           }`}
                         >
                           {item.completed ? (
-                            <Check className="w-3 h-3 text-black transition-all duration-300 group-hover/item:scale-125" />
+                            <Check className="w-3 h-3 text-white transition-all duration-300 group-hover/item:scale-125" />
                           ) : (
-                            <Clock className="w-3 h-3 text-textbody transition-all duration-300 group-hover/item:scale-125" />
+                            <Clock className="w-3 h-3 text-textbody transition-all duration-300 group-hover/item:scale-125 group-hover/item:text-[#C642FC]" />
                           )}
                         </div>
                         <div className="flex flex-col gap-2 flex-grow">
-                          <h4 className="font-heading-h6 font-[number:var(--heading-h6-font-weight)] text-textwhite text-[length:var(--heading-h6-font-size)] tracking-[var(--heading-h6-letter-spacing)] leading-[var(--heading-h6-line-height)] group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#73d0b9] group-hover/item:to-[#0091bd] transition-all duration-500">
+                          <h4 className="font-heading-h6 font-[number:var(--heading-h6-font-weight)] text-textwhite text-[length:var(--heading-h6-font-size)] tracking-[var(--heading-h6-letter-spacing)] leading-[var(--heading-h6-line-height)] group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#C642FC] group-hover/item:to-[#7A1CAC] transition-all duration-500">
                             {item.title}
                           </h4>
                           <p className="font-body-small-regular text-textbody group-hover/item:text-textwhite transition-colors duration-500">
@@ -415,9 +415,9 @@ export const Roadmap = (): React.JSX.Element => {
                         <div
                           className={`h-full rounded-full transition-all duration-1000 ${
                             item.completed
-                              ? "bg-brandlime-green w-full"
+                              ? "bg-[#C642FC] w-full"
                               : quarter.status === "In Progress"
-                              ? "bg-brandblue-light w-1/2"
+                              ? "bg-[#C642FC] w-1/2"
                               : "bg-[rgba(255,255,255,0.3)] w-0 group-hover/item:w-1/4"
                           }`}
                         ></div>
@@ -429,7 +429,7 @@ export const Roadmap = (): React.JSX.Element => {
                 {/* Timeline Connector (for mobile) */}
                 {index < roadmapItems.length - 1 && (
                   <div className="lg:hidden flex justify-center mt-4">
-                    <div className="w-1 h-8 bg-gradient-to-b from-brandlime-green to-brandblue-light rounded-full"></div>
+                    <div className="w-1 h-8 bg-gradient-to-b from-[#C642FC] to-[#7A1CAC] rounded-full"></div>
                   </div>
                 )}
               </div>
@@ -444,7 +444,7 @@ export const Roadmap = (): React.JSX.Element => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="p-8 rounded-2xl border border-brandblue-light bg-[rgba(2,91,207,0.1)] backdrop-blur-sm max-w-2xl">
+            <div className="p-8 rounded-2xl border border-[#C642FC] bg-[rgba(198,66,252,0.1)] backdrop-blur-sm max-w-2xl">
               <h3 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-[length:var(--heading-h3-font-size)] tracking-[var(--heading-h3-letter-spacing)] leading-[var(--heading-h3-line-height)] mb-4">
                 Help Shape Our Future
               </h3>
@@ -453,11 +453,11 @@ export const Roadmap = (): React.JSX.Element => {
                 you'd love to see next!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 group overflow-hidden relative">
+                <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group overflow-hidden relative">
                   <span className="relative z-10 font-body-normal-medium text-textwhite">
                     Submit Feature Request
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#0091bd] to-[#025bcf] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Button>
                 <Button className="bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] h-12 px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 border border-[#ffffff1a]">
                   <span className="font-body-normal-medium text-textwhite">

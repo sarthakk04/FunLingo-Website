@@ -11,9 +11,9 @@ export const HeroSection = (): React.JSX.Element => {
   }, []);
 
   return (
-    <section className="flex flex-col w-full items-center justify-center gap-16 md:gap-24 lg:gap-48 pt-16 md:pt-20 lg:pt-24 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-[linear-gradient(180deg,#000000_0%,#0a1628_38%,#025bcf_74%,#0091bd_95%)] min-h-screen">
+    <section className="flex flex-col w-full items-center justify-center gap-16 md:gap-24 lg:gap-48 pt-16 md:pt-20 lg:pt-24 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-[linear-gradient(180deg,#000000_0%,#1a0a28_38%,#7A1CAC_74%,#C642FC_95%)] min-h-screen">
       {/* Animated Background Elements */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-[-50%] w-[800px] h-[800px] md:w-[1200px] md:h-[1200px] lg:w-[2308px] lg:h-[1014px] rounded-full border border-solid border-[#0091bd] [background:radial-gradient(50%_50%_at_50%_50%,#000000_82%,#025bcf_100%)] animate-pulse-glow" />
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-[-50%] w-[800px] h-[800px] md:w-[1200px] md:h-[1200px] lg:w-[2308px] lg:h-[1014px] rounded-full border border-solid border-[#C642FC] [background:radial-gradient(50%_50%_at_50%_50%,#000000_82%,#7A1CAC_100%)] animate-pulse-glow" />
 
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50 z-0" />
 
@@ -27,7 +27,7 @@ export const HeroSection = (): React.JSX.Element => {
         >
           {/* Announcement Badge */}
           <div className="inline-flex items-center justify-center gap-2 pl-2 pr-4 py-2 relative rounded-[84px] overflow-hidden border-[none] shadow-[0px_2px_4px_1px_#0000001a,0px_1px_3px_#0000000f] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] before:content-[''] before:absolute before:inset-0 before:p-px before:rounded-[84px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(229,229,232,0.1)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:scale-105 transition-transform duration-300 animate-fade-in-up">
-            <Badge className="inline-flex flex-col items-start px-[7px] py-px relative rounded-[40px] bg-[linear-gradient(180deg,rgba(3,141,191,1)_0%,rgba(115,208,185,1)_100%)] border-0 h-auto animate-pulse">
+            <Badge className="inline-flex flex-col items-start px-[7px] py-px relative rounded-[40px] bg-[linear-gradient(180deg,#C642FC_0%,#7A1CAC_100%)] border-0 h-auto animate-pulse">
               <span className="relative flex items-center justify-center w-fit mt-[-1.00px] font-body-xs-medium font-[number:var(--body-xs-medium-font-weight)] text-textwhite text-[length:var(--body-xs-medium-font-size)] tracking-[var(--body-xs-medium-letter-spacing)] leading-[var(--body-xs-medium-line-height)] whitespace-nowrap [font-style:var(--body-xs-medium-font-style)]">
                 New
               </span>
@@ -64,11 +64,11 @@ export const HeroSection = (): React.JSX.Element => {
             className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 relative animate-fade-in-up"
             style={{ animationDelay: "600ms" }}
           >
-            <Button className="relative bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-12 sm:h-10 px-6 sm:px-5 py-3 sm:py-2 rounded-lg overflow-hidden border-0 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 group w-full sm:w-auto">
+            <Button className="relative bg-[linear-gradient(135deg,#C642FC_0%,#7A1CAC_100%)] h-12 sm:h-10 px-6 sm:px-5 py-3 sm:py-2 rounded-lg overflow-hidden border-0 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 group w-full sm:w-auto">
               <span className="relative flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textwhite text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)]">
                 Download Extension
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0091bd] to-[#025bcf] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#7A1CAC] to-[#C642FC] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
             </Button>
 
             <Button className="relative bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(229,229,232,1)_100%)] h-12 sm:h-10 px-6 sm:px-5 py-3 sm:py-2 rounded-lg overflow-hidden border-0 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-xl group w-full sm:w-auto">
@@ -88,7 +88,7 @@ export const HeroSection = (): React.JSX.Element => {
           }`}
         >
           {/* Main Background */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-full flex justify-center rounded-2xl overflow-hidden [background:url(..//figmaAssets/background.png)_50%_50%_/_cover] shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/40 transition-shadow duration-500">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-full flex justify-center rounded-2xl overflow-hidden [background:url(..//figmaAssets/background.png)_50%_50%_/_cover] shadow-2xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-shadow duration-500">
             <img
               className="w-full h-full object-cover lg:ml-[255px] transform hover:scale-105 transition-transform duration-700"
               alt="Abstract color swirl"
@@ -141,10 +141,10 @@ export const HeroSection = (): React.JSX.Element => {
         @keyframes pulse-glow {
           0%,
           100% {
-            box-shadow: 0 0 20px rgba(0, 145, 189, 0.3);
+            box-shadow: 0 0 20px rgba(198, 66, 252, 0.3);
           }
           50% {
-            box-shadow: 0 0 40px rgba(0, 145, 189, 0.6);
+            box-shadow: 0 0 40px rgba(198, 66, 252, 0.6);
           }
         }
         @keyframes float {

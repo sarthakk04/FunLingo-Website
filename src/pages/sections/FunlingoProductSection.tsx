@@ -73,7 +73,7 @@ export const FunlingoProductSection = (): React.JSX.Element => {
       >
         {/* Text Content */}
         <div className="flex flex-col max-w-full lg:max-w-[480px] items-start justify-center gap-4 sm:gap-5 flex-1 order-2 lg:order-1">
-          <Badge className="inline-flex items-center justify-center px-4 py-1.5 rounded-[99px] border border-solid border-[#ffffff1a] shadow-[inset_0px_-1px_4px_#00000040,inset_0px_0px_0px_#e5e5e8] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] h-auto hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 animate-fade-in-up">
+          <Badge className="inline-flex items-center justify-center px-4 py-1.5 rounded-[99px] border border-solid border-[#ffffff1a] shadow-[inset_0px_-1px_4px_#00000040,inset_0px_0px_0px_#e5e5e8] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] h-auto hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 animate-fade-in-up">
             <span className="font-body-xs-medium font-[number:var(--body-xs-medium-font-weight)] text-textwhite text-[length:var(--body-xs-medium-font-size)] tracking-[var(--body-xs-medium-letter-spacing)] leading-[var(--body-xs-medium-line-height)] [font-style:var(--body-xs-medium-font-style)]">
               How It Works
             </span>
@@ -127,16 +127,16 @@ export const FunlingoProductSection = (): React.JSX.Element => {
               : "opacity-0 scale-95 rotate-3"
           }`}
         >
-          <div className="w-full h-full rounded-2xl overflow-hidden border border-[#ffffff1a] bg-[radial-gradient(50%_50%_at_51%_-14%,rgba(2,91,207,0.2)_0%,rgba(0,0,0,1)_100%)] flex items-center justify-center group hover:shadow-2xl hover:shadow-blue-500/30 hover:border-[#ffffff66] transition-all duration-500">
+          <div className="w-full h-full rounded-2xl overflow-hidden border border-[#ffffff1a] bg-[radial-gradient(50%_50%_at_51%_-14%,rgba(122,28,172,0.2)_0%,rgba(0,0,0,1)_100%)] flex items-center justify-center group hover:shadow-2xl hover:shadow-purple-500/30 hover:border-[#ffffff66] transition-all duration-500">
             <div className="text-center p-6 sm:p-8 transform group-hover:scale-105 transition-transform duration-500">
               <div className="text-6xl sm:text-7xl lg:text-9xl mb-4 sm:mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500">
                 🌐
               </div>
-              <p className="text-textwhite text-xl sm:text-2xl font-heading-h5 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-500">
+              <p className="text-textwhite text-xl sm:text-2xl font-heading-h5 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-500">
                 Universal Language Learning
               </p>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         </div>
       </div>
@@ -155,23 +155,23 @@ export const FunlingoProductSection = (): React.JSX.Element => {
               : "opacity-0 scale-95 -rotate-6"
           }`}
         >
-          <div className="w-full h-full rounded-2xl overflow-hidden border border-[#ffffff1a] bg-[radial-gradient(50%_50%_at_51%_-14%,rgba(2,91,207,0.2)_0%,rgba(0,0,0,1)_100%)] flex items-center justify-center group hover:shadow-2xl hover:shadow-blue-500/30 hover:border-[#ffffff66] transition-all duration-500">
+          <div className="w-full h-full rounded-2xl overflow-hidden border border-[#ffffff1a] bg-[radial-gradient(50%_50%_at_51%_-14%,rgba(122,28,172,0.2)_0%,rgba(0,0,0,1)_100%)] flex items-center justify-center group hover:shadow-2xl hover:shadow-purple-500/30 hover:border-[#ffffff66] transition-all duration-500">
             <div className="text-center p-6 sm:p-8 transform group-hover:scale-105 transition-transform duration-500">
               <div className="text-6xl sm:text-7xl lg:text-9xl mb-4 sm:mb-6 transform group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500">
                 ⚡
               </div>
-              <p className="text-textwhite text-xl sm:text-2xl font-heading-h5 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-500">
+              <p className="text-textwhite text-xl sm:text-2xl font-heading-h5 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-500">
                 Lightning Fast
               </p>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-bl from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         </div>
 
         {/* Text Content */}
         <div className="flex flex-col max-w-full lg:max-w-[480px] items-start justify-center gap-4 sm:gap-5 flex-1 order-2 lg:order-2">
           <Badge
-            className="inline-flex items-center justify-center px-4 py-1.5 rounded-[99px] border border-solid border-[#ffffff1a] shadow-[inset_0px_-1px_4px_#00000040,inset_0px_0px_0px_#e5e5e8] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] h-auto hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 animate-fade-in-up"
+            className="inline-flex items-center justify-center px-4 py-1.5 rounded-[99px] border border-solid border-[#ffffff1a] shadow-[inset_0px_-1px_4px_#00000040,inset_0px_0px_0px_#e5e5e8] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] h-auto hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 animate-fade-in-up"
             style={{ animationDelay: "800ms" }}
           >
             <span className="font-body-xs-medium font-[number:var(--body-xs-medium-font-weight)] text-textwhite text-[length:var(--body-xs-medium-font-size)] tracking-[var(--body-xs-medium-letter-spacing)] leading-[var(--body-xs-medium-line-height)] [font-style:var(--body-xs-medium-font-style)]">
@@ -196,7 +196,7 @@ export const FunlingoProductSection = (): React.JSX.Element => {
                 style={{ animationDelay: `${1200 + index * 200}ms` }}
               >
                 <div
-                  className={`font-heading-h4 font-[number:var(--heading-h4-font-weight)] text-brandlime-green text-[length:var(--heading-h4-font-size)] tracking-[var(--heading-h4-letter-spacing)] leading-[var(--heading-h4-line-height)] [font-style:var(--heading-h4-font-style)] transform transition-all duration-1000 ${
+                  className={`text-white font-heading-h4 font-[number:var(--heading-h4-font-weight)] text-brandlime-green text-[length:var(--heading-h4-font-size)] tracking-[var(--heading-h4-letter-spacing)] leading-[var(--heading-h4-line-height)] [font-style:var(--heading-h4-font-style)] transform transition-all duration-1000 ${
                     animatedStats[index]
                       ? "scale-100 opacity-100"
                       : "scale-90 opacity-0"
@@ -206,7 +206,7 @@ export const FunlingoProductSection = (): React.JSX.Element => {
                 </div>
 
                 <div className="flex flex-col items-start gap-2 w-full">
-                  <h3 className="font-heading-h6 font-[number:var(--heading-h6-font-weight)] text-textwhite text-[length:var(--heading-h6-font-size)] tracking-[var(--heading-h6-letter-spacing)] leading-[var(--heading-h6-line-height)] [font-style:var(--heading-h6-font-style)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+                  <h3 className="font-heading-h6 font-[number:var(--heading-h6-font-weight)] text-textwhite text-[length:var(--heading-h6-font-size)] tracking-[var(--heading-h6-letter-spacing)] leading-[var(--heading-h6-line-height)] [font-style:var(--heading-h6-font-style)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                     {stat.title}
                   </h3>
 
@@ -228,7 +228,7 @@ export const FunlingoProductSection = (): React.JSX.Element => {
         <p className="font-body-normal-regular text-textbody text-center max-w-md">
           Ready to transform your language learning journey?
         </p>
-        <button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-12 px-6 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30">
+        <button className="bg-[linear-gradient(135deg,#C642FC_0%,#7A1CAC_100%)] h-12 px-6 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30">
           <span className="font-body-normal-medium text-textwhite">
             Get Started Now
           </span>

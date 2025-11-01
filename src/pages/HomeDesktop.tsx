@@ -61,7 +61,7 @@ export const HomeDesktop = (): React.JSX.Element => {
       {/* Navigation Header */}
       <header
         className={`relative self-stretch w-full h-16 bg-[rgba(0,0,0,0.8)] backdrop-blur-[15px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(15px)_brightness(100%)] border-b border-[#ffffff1a] sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "shadow-2xl shadow-blue-500/20" : ""
+          isScrolled ? "shadow-2xl shadow-purple-500/20" : ""
         }`}
       >
         <div className="flex items-center justify-between h-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,10 +70,10 @@ export const HomeDesktop = (): React.JSX.Element => {
             href="/"
             className="animate-fade-in-down hover:scale-105 transition-transform duration-300"
           >
-            <h1 className="relative flex items-center justify-center w-fit bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,rgba(115,208,185,1)_40%,rgba(0,145,189,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)]">
+            <h1 className="relative flex items-center justify-center w-fit bg-[linear-gradient(135deg,rgba(2120,2120,2120,0)_0%,#C642FC_40%,#7A1CAC_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)]">
               <img
                 src={logo}
-                width={55}
+                width={120}
                 alt="Funlingo Logo"
                 className="drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
               />
@@ -99,7 +99,7 @@ export const HomeDesktop = (): React.JSX.Element => {
               >
                 {item.label}
                 <span
-                  className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] transition-all duration-300 group-hover:w-full ${
+                  className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] transition-all duration-300 group-hover:w-full ${
                     item.active ? "w-full" : ""
                   }`}
                 ></span>
@@ -112,17 +112,17 @@ export const HomeDesktop = (): React.JSX.Element => {
             className="hidden md:block animate-fade-in-down"
             style={{ animationDelay: "700ms" }}
           >
-            <Button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-10 px-5 py-2 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 group overflow-hidden relative">
+            <Button className="bg-[linear-gradient(135deg,#C642FC_0%,#7A1CAC_100%)] h-10 px-5 py-2 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group overflow-hidden relative">
               <span className="relative z-10 flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textwhite text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)]">
                 Download Extension
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0091bd] to-[#025bcf] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#7A1CAC] to-[#C642FC] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300 group animate-fade-in-down"
+            className="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg bg-[rgba(2120,2120,2120,0.1)] hover:bg-[rgba(2120,2120,2120,0.2)] transition-all duration-300 group animate-fade-in-down"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -168,11 +168,11 @@ export const HomeDesktop = (): React.JSX.Element => {
               >
                 {item.label}
                 {item.active && (
-                  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] rounded-full"></span>
+                  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] rounded-full"></span>
                 )}
               </a>
             ))}
-            <Button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 mt-4">
+            <Button className="bg-[linear-gradient(135deg,#C642FC_0%,#7A1CAC_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 mt-4">
               <span className="relative flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textwhite text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)]">
                 Download Extension
               </span>
@@ -188,7 +188,7 @@ export const HomeDesktop = (): React.JSX.Element => {
             {featureBadges.map((badge, index) => (
               <div
                 key={index}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[rgba(255,255,255,0.05)] hover:bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.1)] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/10 group cursor-pointer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[rgba(2120,2120,2120,0.05)] hover:bg-[rgba(2120,2120,2120,0.1)] border border-[rgba(2120,2120,2120,0.1)] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group cursor-pointer"
                 style={{ animationDelay: `${index * 100 + 400}ms` }}
               >
                 <img
@@ -196,7 +196,7 @@ export const HomeDesktop = (): React.JSX.Element => {
                   alt="Feature icon"
                   src={badge.icon}
                 />
-                <p className="relative flex items-center justify-center w-fit font-body-small-regular font-[number:var(--body-small-regular-font-weight)] text-textwhite text-[length:var(--body-small-regular-font-size)] tracking-[var(--body-small-regular-letter-spacing)] leading-[var(--body-small-regular-line-height)] whitespace-nowrap [font-style:var(--body-small-regular-font-style)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+                <p className="relative flex items-center justify-center w-fit font-body-small-regular font-[number:var(--body-small-regular-font-weight)] text-textwhite text-[length:var(--body-small-regular-font-size)] tracking-[var(--body-small-regular-letter-spacing)] leading-[var(--body-small-regular-line-height)] whitespace-nowrap [font-style:var(--body-small-regular-font-style)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                   {badge.text}
                 </p>
               </div>

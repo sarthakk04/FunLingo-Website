@@ -109,13 +109,13 @@ export const FunlingoTestimonialsSection = (): React.JSX.Element => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col w-full items-center justify-center gap-10 sm:gap-12 lg:gap-14 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 xl:px-24 relative [background:radial-gradient(50%_50%_at_0%_100%,rgba(0,145,189,1)_0%,rgba(2,91,207,1)_24%,rgba(0,0,0,1)_100%)] overflow-hidden"
+      className="flex flex-col w-full items-center justify-center gap-10 sm:gap-12 lg:gap-14 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 xl:px-24 relative [background:radial-gradient(50%_50%_at_0%_100%,rgba(198,66,252,1)_0%,rgba(122,28,172,1)_24%,rgba(0,0,0,1)_100%)] overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-0" />
-      <div className="absolute top-10 right-10 w-20 h-20 bg-blue-500/10 rounded-full blur-xl animate-pulse-slow" />
+      <div className="absolute top-10 right-10 w-20 h-20 bg-purple-500/10 rounded-full blur-xl animate-pulse-slow" />
       <div
-        className="absolute bottom-20 left-10 w-16 h-16 bg-cyan-500/10 rounded-full blur-xl animate-pulse-slow"
+        className="absolute bottom-20 left-10 w-16 h-16 bg-purple-400/10 rounded-full blur-xl animate-pulse-slow"
         style={{ animationDelay: "1s" }}
       />
 
@@ -125,7 +125,7 @@ export const FunlingoTestimonialsSection = (): React.JSX.Element => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <Badge className="inline-flex items-center justify-center px-4 py-1.5 relative flex-[0_0_auto] rounded-[99px] border border-solid border-[#ffffff1a] shadow-[inset_0px_-1px_4px_#00000040,inset_0px_0px_0px_#e5e5e8] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] h-auto hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 animate-fade-in-up">
+        <Badge className="inline-flex items-center justify-center px-4 py-1.5 relative flex-[0_0_auto] rounded-[99px] border border-solid border-[#ffffff1a] shadow-[inset_0px_-1px_4px_#00000040,inset_0px_0px_0px_#e5e5e8] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] h-auto hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 animate-fade-in-up">
           <span className="relative flex items-center justify-center w-fit mt-[-1.00px] font-body-xs-medium font-[number:var(--body-xs-medium-font-weight)] text-textwhite text-[length:var(--body-xs-medium-font-size)] tracking-[var(--body-xs-medium-letter-spacing)] leading-[var(--body-xs-medium-line-height)] whitespace-nowrap [font-style:var(--body-xs-medium-font-style)]">
             Testimonials
           </span>
@@ -165,7 +165,7 @@ export const FunlingoTestimonialsSection = (): React.JSX.Element => {
               key={index}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === activeTestimonial
-                  ? "bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] scale-125"
+                  ? "bg-[linear-gradient(135deg,#C642FC_0%,#7A1CAC_100%)] scale-125"
                   : "bg-textbody hover:bg-textwhite"
               }`}
               onClick={() => setActiveTestimonial(index)}
@@ -279,7 +279,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
   return (
     <Card
-      className={`flex flex-col items-start gap-4 sm:gap-6 p-6 sm:p-8 bg-[rgba(0,0,0,0.8)] backdrop-blur-sm rounded-xl overflow-hidden border border-[#ffffff1a] transition-all duration-500 group hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 ${
+      className={`flex flex-col items-start gap-4 sm:gap-6 p-6 sm:p-8 bg-[rgba(0,0,0,0.8)] backdrop-blur-sm rounded-xl overflow-hidden border border-[#ffffff1a] transition-all duration-500 group hover:shadow-2xl hover:shadow-purple-500/20 hover:scale-105 relative ${
         testimonial.size === "small"
           ? "w-full max-w-sm"
           : "w-full max-w-2xl lg:max-w-[664px]"
@@ -291,10 +291,14 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <CardContent className="p-0 flex flex-col gap-4 sm:gap-6 w-full relative">
+      {/* Hover Gradient Border Effect - Fixed to not affect content */}
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm group-hover:blur-md"></div>
+      <div className="absolute inset-[1px] rounded-xl bg-[rgba(0,0,0,0.9)] -z-10 backdrop-blur-sm"></div>
+
+      <CardContent className="p-0 flex flex-col gap-4 sm:gap-6 w-full relative z-10">
         {/* Quote Icon */}
         <div className="absolute -top-2 -right-2 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
-          <Quote className="w-16 h-16 text-[#73d0b9] transform rotate-12" />
+          <Quote className="w-16 h-16 text-[#C642FC] transform rotate-12" />
         </div>
 
         {/* Quote Text */}
@@ -321,7 +325,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
         {/* Author Info */}
         <div className="flex items-start gap-3 relative self-stretch w-full flex-[0_0_auto] group-hover:transform group-hover:translate-x-1 transition-transform duration-300">
-          <Avatar className="relative w-10 h-10 rounded-[28px] group-hover:scale-110 transition-transform duration-300 border-2 border-transparent group-hover:border-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)]">
+          <Avatar className="relative w-10 h-10 rounded-[28px] group-hover:scale-110 transition-transform duration-300 border-2 border-transparent group-hover:border-[linear-gradient(135deg,#C642FC_0%,#7A1CAC_100%)]">
             <AvatarImage
               src={testimonial.avatar}
               alt={testimonial.name}
@@ -330,7 +334,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           </Avatar>
 
           <div className="flex flex-col items-start relative flex-1 grow">
-            <p className="relative flex items-center justify-center self-stretch mt-[-1.00px] font-body-small-medium text-textwhite text-[length:var(--body-small-medium-font-size)] leading-[var(--body-small-medium-line-height)] font-[number:var(--body-small-medium-font-weight)] tracking-[var(--body-small-medium-letter-spacing)] [font-style:var(--body-small-medium-font-style)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+            <p className="relative flex items-center justify-center self-stretch mt-[-1.00px] font-body-small-medium text-textwhite text-[length:var(--body-small-medium-font-size)] leading-[var(--body-small-medium-line-height)] font-[number:var(--body-small-medium-font-weight)] tracking-[var(--body-small-medium-letter-spacing)] [font-style:var(--body-small-medium-font-style)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
               {testimonial.name}
             </p>
 
@@ -339,10 +343,6 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
             </p>
           </div>
         </div>
-
-        {/* Hover Gradient Border Effect */}
-        <div className="absolute inset-0 rounded  -xl bg-gradient-to-r from-[#73d0b9] to-[#0091bd] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm group-hover:blur-md"></div>
-        <div className="absolute inset-[1px] rounded-xl bg-[rgba(0,0,0,0.9)] -z-10 backdrop-blur-sm"></div>
       </CardContent>
     </Card>
   );

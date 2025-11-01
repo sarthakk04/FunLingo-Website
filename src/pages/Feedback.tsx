@@ -53,11 +53,11 @@ export const Feedback = (): React.JSX.Element => {
   };
 
   return (
-    <div className="flex flex-col items-start relative bg-[linear-gradient(180deg,#000000_0%,#0a1628_50%,#025bcf_100%)] min-h-screen">
+    <div className="flex flex-col items-start relative bg-[linear-gradient(180deg,#000000_0%,#1a0a28_50%,#7A1CAC_100%)] min-h-screen">
       {/* Navigation Header */}
       <header
         className={`relative self-stretch w-full h-16 bg-[rgba(0,0,0,0.8)] backdrop-blur-[15px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(15px)_brightness(100%)] border-b border-[#ffffff1a] sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "shadow-2xl shadow-blue-500/20" : ""
+          isScrolled ? "shadow-2xl shadow-purple-500/20" : ""
         }`}
       >
         <div className="flex items-center justify-between h-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,10 +66,10 @@ export const Feedback = (): React.JSX.Element => {
             href="/"
             className="animate-fade-in-down hover:scale-105 transition-transform duration-300"
           >
-            <h1 className="relative flex items-center justify-center w-fit bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,rgba(115,208,185,1)_40%,rgba(0,145,189,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)]">
+            <h1 className="relative flex items-center justify-center w-fit bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,#C642FC_40%,#7A1CAC_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)]">
               <img
                 src={logo}
-                width={55}
+                width={120}
                 alt="Funlingo Logo"
                 className="drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
               />
@@ -95,7 +95,7 @@ export const Feedback = (): React.JSX.Element => {
               >
                 {item.label}
                 <span
-                  className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] transition-all duration-300 group-hover:w-full ${
+                  className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] transition-all duration-300 group-hover:w-full ${
                     item.active ? "w-full" : ""
                   }`}
                 ></span>
@@ -108,11 +108,11 @@ export const Feedback = (): React.JSX.Element => {
             className="hidden md:block animate-fade-in-down"
             style={{ animationDelay: "700ms" }}
           >
-            <Button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-10 px-5 py-2 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 group overflow-hidden relative">
+            <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-10 px-5 py-2 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group overflow-hidden relative">
               <span className="relative z-10 flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textwhite text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)]">
                 Download Extension
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0091bd] to-[#025bcf] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
           </div>
 
@@ -164,11 +164,11 @@ export const Feedback = (): React.JSX.Element => {
               >
                 {item.label}
                 {item.active && (
-                  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] rounded-full"></span>
+                  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] rounded-full"></span>
                 )}
               </a>
             ))}
-            <Button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 mt-4">
+            <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 mt-4">
               <span className="relative flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textwhite text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)]">
                 Download Extension
               </span>
@@ -206,12 +206,12 @@ export const Feedback = (): React.JSX.Element => {
           {/* Success Message */}
           {submitted && (
             <div
-              className={`w-full max-w-2xl p-4 rounded-lg bg-brandlime-green border border-brandlime-green backdrop-blur-sm transition-all duration-500 ${
+              className={`w-full max-w-2xl p-4 rounded-lg bg-[rgba(198,66,252,0.2)] border border-[#C642FC] backdrop-blur-sm transition-all duration-500 ${
                 submitted ? "animate-fade-in-up opacity-100" : "opacity-0"
               }`}
               style={{ animationDelay: "300ms" }}
             >
-              <p className="font-body-normal-medium text-black text-center">
+              <p className="font-body-normal-medium text-white text-center">
                 Thank you for your feedback! We'll review it carefully.
               </p>
             </div>
@@ -224,11 +224,11 @@ export const Feedback = (): React.JSX.Element => {
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
-            } border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] hover:bg-[rgba(255,255,255,0.08)] group hover:shadow-2xl hover:shadow-blue-500/10 animate-fade-in-up`}
+            } border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] hover:bg-[rgba(255,255,255,0.08)] group hover:shadow-2xl hover:shadow-purple-500/10 animate-fade-in-up`}
             style={{ animationDelay: "400ms" }}
           >
             <div className="flex flex-col gap-2">
-              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                 Name
               </label>
               <Input
@@ -238,13 +238,13 @@ export const Feedback = (): React.JSX.Element => {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 required
-                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-brandblue-light transition-all duration-300"
+                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300"
                 placeholder="Your name"
               />
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                 Email
               </label>
               <Input
@@ -254,13 +254,13 @@ export const Feedback = (): React.JSX.Element => {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 required
-                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-brandblue-light transition-all duration-300"
+                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300"
                 placeholder="your.email@example.com"
               />
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                 Category
               </label>
               <select
@@ -268,7 +268,7 @@ export const Feedback = (): React.JSX.Element => {
                 onChange={(e) =>
                   setFormData({ ...formData, category: e.target.value })
                 }
-                className="h-10 px-3 py-2 rounded-lg bg-[rgba(0,0,0,0.3)] border border-[#ffffff1a] text-textwhite font-body-normal-regular hover:border-[#ffffff40] focus:border-brandblue-light transition-all duration-300"
+                className="h-10 px-3 py-2 rounded-lg bg-[rgba(0,0,0,0.3)] border border-[#ffffff1a] text-textwhite font-body-normal-regular hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300"
               >
                 <option value="feature">Feature Request</option>
                 <option value="bug">Bug Report</option>
@@ -278,7 +278,7 @@ export const Feedback = (): React.JSX.Element => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                 Your Feedback
               </label>
               <Textarea
@@ -287,19 +287,19 @@ export const Feedback = (): React.JSX.Element => {
                   setFormData({ ...formData, message: e.target.value })
                 }
                 required
-                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-brandblue-light transition-all duration-300 min-h-[200px] resize-vertical"
+                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300 min-h-[200px] resize-vertical"
                 placeholder="Tell us what's on your mind..."
               />
             </div>
 
             <Button
               type="submit"
-              className="w-full bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-12 px-6 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 group/btn overflow-hidden relative mt-2"
+              className="w-full bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-12 px-6 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group/btn overflow-hidden relative mt-2"
             >
               <span className="relative z-10 font-body-normal-medium text-textwhite group-hover/btn:scale-105 transition-transform duration-300">
                 Submit Feedback
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0091bd] to-[#025bcf] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
             </Button>
           </form>
 
@@ -354,12 +354,12 @@ export const Feedback = (): React.JSX.Element => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center gap-3 p-6 rounded-xl border border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] backdrop-blur-sm text-center group hover:bg-[rgba(255,255,255,0.08)] hover:border-[#ffffff40] hover:scale-105 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 animate-fade-in-up"
+                className="flex flex-col items-center gap-3 p-6 rounded-xl border border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] backdrop-blur-sm text-center group hover:bg-[rgba(255,255,255,0.08)] hover:border-[#ffffff40] hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: item.delay }}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-[#73d0b9] to-[#0091bd] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#C642FC] to-[#7A1CAC] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <svg
-                    className="w-6 h-6 text-black"
+                    className="w-6 h-6 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -367,7 +367,7 @@ export const Feedback = (): React.JSX.Element => {
                     {item.icon}
                   </svg>
                 </div>
-                <h4 className="font-heading-h6 text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+                <h4 className="font-heading-h6 text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                   {item.title}
                 </h4>
                 <p className="font-body-small-regular text-textbody group-hover:text-textwhite transition-colors duration-300">

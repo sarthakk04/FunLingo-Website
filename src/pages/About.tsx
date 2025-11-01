@@ -76,36 +76,36 @@ export const About = (): React.JSX.Element => {
       title: "Innovation",
       description:
         "Pioneering AI-powered language learning through video content",
-      gradient: "from-[#73d0b9] to-[#0091bd]",
+      gradient: "from-[#C642FC] to-[#7A1CAC]",
     },
     {
       icon: <Globe className="w-6 h-6" />,
       title: "Community",
       description:
         "Building a global community of passionate language learners",
-      gradient: "from-[#025bcf] to-[#0091bd]",
+      gradient: "from-[#C642FC] to-[#7A1CAC]",
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Speed",
       description:
         "Instant translations and explanations without slowing you down",
-      gradient: "from-[#73d0b9] to-[#025bcf]",
+      gradient: "from-[#C642FC] to-[#7A1CAC]",
     },
     {
       icon: <Heart className="w-6 h-6" />,
       title: "Passion",
       description: "Driven by our love for languages and learning",
-      gradient: "from-[#0091bd] to-[#025bcf]",
+      gradient: "from-[#C642FC] to-[#7A1CAC]",
     },
   ];
 
   return (
-    <div className="flex flex-col items-start relative bg-[linear-gradient(180deg,#000000_0%,#0a1628_50%,#025bcf_100%)] min-h-screen">
+    <div className="flex flex-col items-start relative bg-[linear-gradient(180deg,#000000_0%,#1a0a28_50%,#7A1CAC_100%)] min-h-screen">
       {/* Navigation Header */}
       <header
         className={`relative self-stretch w-full h-16 bg-[rgba(0,0,0,0.8)] backdrop-blur-[15px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(15px)_brightness(100%)] border-b border-[#ffffff1a] sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "shadow-2xl shadow-blue-500/20" : ""
+          isScrolled ? "shadow-2xl shadow-purple-500/20" : ""
         }`}
       >
         <div className="flex items-center justify-between h-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,10 +114,10 @@ export const About = (): React.JSX.Element => {
             href="/"
             className="animate-fade-in-down hover:scale-105 transition-transform duration-300"
           >
-            <h1 className="relative flex items-center justify-center w-fit bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,rgba(115,208,185,1)_40%,rgba(0,145,189,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)]">
+            <h1 className="relative flex items-center justify-center w-fit bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,#C642FC_40%,#7A1CAC_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)]">
               <img
                 src={logo}
-                width={55}
+                width={120}
                 alt="Funlingo Logo"
                 className="drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
               />
@@ -143,7 +143,7 @@ export const About = (): React.JSX.Element => {
               >
                 {item.label}
                 <span
-                  className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] transition-all duration-300 group-hover:w-full ${
+                  className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] transition-all duration-300 group-hover:w-full ${
                     item.active ? "w-full" : ""
                   }`}
                 ></span>
@@ -156,12 +156,11 @@ export const About = (): React.JSX.Element => {
             className="hidden md:block animate-fade-in-down"
             style={{ animationDelay: "700ms" }}
           >
-            <Button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-10 px-5 py-2 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 group overflow-hidden relative">
-              {/* <Rocket className="w-4 h-4 mr-2 relative z-10" /> */}
+            <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-10 px-5 py-2 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group overflow-hidden relative">
               <span className="relative z-10 flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textwhite text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)]">
                 Download Extension
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0091bd] to-[#025bcf] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
           </div>
 
@@ -213,11 +212,11 @@ export const About = (): React.JSX.Element => {
               >
                 {item.label}
                 {item.active && (
-                  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] rounded-full"></span>
+                  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] rounded-full"></span>
                 )}
               </a>
             ))}
-            <Button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 mt-4">
+            <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 mt-4">
               <span className="relative flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textwhite text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)]">
                 Download Extension
               </span>
@@ -240,7 +239,7 @@ export const About = (): React.JSX.Element => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(115,208,185,0.1)] border border-[#73d0b9]/20 text-[#73d0b9] text-sm font-medium mb-2 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(198,66,252,0.1)] border border-[#C642FC]/20 text-[#C642FC] text-sm font-medium mb-2 animate-fade-in-up">
               <Target className="w-4 h-4" />
               Our Story
             </div>
@@ -304,7 +303,7 @@ export const About = (): React.JSX.Element => {
                 {values.map((value, index) => (
                   <div
                     key={index}
-                    className="group p-6 rounded-2xl border border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-[#ffffff40]"
+                    className="group p-6 rounded-2xl border border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 hover:border-[#ffffff40]"
                   >
                     <div
                       className={`w-12 h-12 rounded-xl bg-gradient-to-r ${value.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
@@ -312,7 +311,7 @@ export const About = (): React.JSX.Element => {
                       <div className="text-white">{value.icon}</div>
                     </div>
 
-                    <h4 className="font-body-normal-medium text-textwhite text-lg mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+                    <h4 className="font-body-normal-medium text-textwhite text-lg mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                       {value.title}
                     </h4>
 
@@ -337,18 +336,18 @@ export const About = (): React.JSX.Element => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="group p-8 rounded-2xl border border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] backdrop-blur-sm text-center transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-[#ffffff40] animate-fade-in-up"
+                  className="group p-8 rounded-2xl border border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] backdrop-blur-sm text-center transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 hover:border-[#ffffff40] animate-fade-in-up"
                   style={{ animationDelay: stat.delay }}
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-[rgba(115,208,185,0.1)] border border-[#73d0b9]/30 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-[#73d0b9]">{stat.icon}</div>
+                  <div className="w-16 h-16 rounded-2xl bg-[rgba(198,66,252,0.1)] border border-[#C642FC]/30 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-[#C642FC]">{stat.icon}</div>
                   </div>
 
-                  <div className="font-heading-h1 font-[number:var(--heading-h1-font-weight)] text-textwhite text-3xl sm:text-4xl lg:text-[length:var(--heading-h1-font-size)] mb-2 group-hover:scale-110 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+                  <div className="font-heading-h1 font-[number:var(--heading-h1-font-weight)] text-textwhite text-3xl sm:text-4xl lg:text-[length:var(--heading-h1-font-size)] mb-2 group-hover:scale-110 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                     {stat.number}
                   </div>
 
-                  <h4 className="font-body-normal-medium text-textwhite text-lg mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#73d0b9] group-hover:to-[#0091bd] transition-all duration-300">
+                  <h4 className="font-body-normal-medium text-textwhite text-lg mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                     {stat.label}
                   </h4>
 
@@ -363,14 +362,14 @@ export const About = (): React.JSX.Element => {
           {/* Team Story Section */}
           <div className="w-full max-w-4xl">
             <div
-              className={`p-8 sm:p-12 rounded-2xl bg-[rgba(2,91,207,0.1)] border border-[#025bcf]/30 backdrop-blur-sm transition-all duration-1000 delay-700 ${
+              className={`p-8 sm:p-12 rounded-2xl bg-[rgba(122,28,172,0.1)] border border-[#7A1CAC]/30 backdrop-blur-sm transition-all duration-1000 delay-700 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
               }`}
             >
               <div className="text-center space-y-6 animate-fade-in-up">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(0,145,189,0.2)] border border-[#0091bd]/30 text-[#0091bd] text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(198,66,252,0.2)] border border-[#C642FC]/30 text-[#C642FC] text-sm font-medium">
                   <Heart className="w-4 h-4" />
                   Behind the Scenes
                 </div>
@@ -400,15 +399,15 @@ export const About = (): React.JSX.Element => {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                   <div className="flex items-center justify-center gap-2 font-body-small-regular text-textbody text-sm">
-                    <div className="w-2 h-2 bg-[#73d0b9] rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-[#C642FC] rounded-full animate-pulse"></div>
                     Remote First Team
                   </div>
                   <div className="flex items-center justify-center gap-2 font-body-small-regular text-textbody text-sm">
-                    <div className="w-2 h-2 bg-[#0091bd] rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-[#7A1CAC] rounded-full animate-pulse"></div>
                     Global Community
                   </div>
                   <div className="flex items-center justify-center gap-2 font-body-small-regular text-textbody text-sm">
-                    <div className="w-2 h-2 bg-[#025bcf] rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-[#C642FC] rounded-full animate-pulse"></div>
                     User-Focused Development
                   </div>
                 </div>
@@ -439,15 +438,15 @@ export const About = (): React.JSX.Element => {
               className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
               style={{ animationDelay: "200ms" }}
             >
-              <Button className="bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 group/btn overflow-hidden relative">
+              <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group/btn overflow-hidden relative">
                 <Rocket className="w-4 h-4 mr-2 relative z-10 group-hover/btn:scale-110 transition-transform" />
                 <span className="relative z-10 font-body-normal-medium text-textwhite group-hover/btn:scale-105 transition-transform duration-300">
                   Download Extension
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0091bd] to-[#025bcf] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
               </Button>
 
-              <Button className="bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] text-textwhite font-body-normal-medium h-12 px-8 py-3 rounded-lg border border-[#ffffff1a] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/10 group">
+              <Button className="bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] text-textwhite font-body-normal-medium h-12 px-8 py-3 rounded-lg border border-[#ffffff1a] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group">
                 <Heart className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                 Share Feedback
               </Button>
@@ -463,7 +462,7 @@ export const About = (): React.JSX.Element => {
                   {[1, 2, 3, 4].map((i) => (
                     <div
                       key={i}
-                      className="w-6 h-6 rounded-full bg-gradient-to-r from-[#73d0b9] to-[#0091bd] border-2 border-[#0a1628]"
+                      className="w-6 h-6 rounded-full bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] border-2 border-[#1a0a28]"
                     ></div>
                   ))}
                 </div>

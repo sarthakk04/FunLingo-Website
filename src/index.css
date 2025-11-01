@@ -51,9 +51,9 @@
   --body-xs-medium-font-weight: 500;
   --body-xs-medium-letter-spacing: -0.01em;
   --body-xs-medium-line-height: 18px;
-  --brandblue-dark: rgba(2, 91, 207, 1);
-  --brandblue-light: rgba(0, 145, 189, 1);
-  --brandlime-green: rgba(115, 208, 185, 1);
+  --brandpurple-light: rgba(198, 66, 252, 1);
+  --brandpurple-dark: rgba(122, 28, 172, 1);
+  --brandaccent: rgba(198, 66, 252, 1);
   --heading-h1-font-family: "Inter", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, sans-serif;
   --heading-h1-font-size: 56px;
@@ -89,28 +89,28 @@
   --heading-h6-font-weight: 700;
   --heading-h6-letter-spacing: -0.01em;
   --heading-h6-line-height: 26px;
-  --light-green: rgba(234, 254, 235, 1);
+  --light-purple: rgba(234, 235, 254, 1);
   --textblack: rgba(28, 28, 28, 1);
   --textbody: rgba(174, 174, 184, 1);
   --textwhite: rgba(255, 255, 255, 1);
   --white: rgba(255, 255, 255, 1);
 
-  /* Black to Blue Gradient Variables */
+  /* Black to Purple Gradient Variables */
   --gradient-primary: linear-gradient(
     135deg,
     #000000 0%,
-    #0a1628 25%,
-    #025bcf 75%,
-    #0091bd 100%
+    #1a0a28 25%,
+    #7a1cac 75%,
+    #c642fc 100%
   );
   --gradient-hero: linear-gradient(
     180deg,
     #000000 0%,
-    #0a1628 50%,
-    #025bcf 100%
+    #1a0a28 50%,
+    #7a1cac 100%
   );
-  --gradient-accent: linear-gradient(90deg, #000000 0%, #025bcf 100%);
-  --gradient-button: linear-gradient(135deg, #025bcf 0%, #0091bd 100%);
+  --gradient-accent: linear-gradient(90deg, #000000 0%, #7a1cac 100%);
+  --gradient-button: linear-gradient(135deg, #7a1cac 0%, #c642fc 100%);
 }
 
 :root {
@@ -358,8 +358,8 @@
   color: var(--textblack);
 }
 
-.text-brandlime-green {
-  color: var(--brandlime-green);
+.text-brandaccent {
+  color: var(--brandaccent);
 }
 
 .bg-backgroundbackdrop {

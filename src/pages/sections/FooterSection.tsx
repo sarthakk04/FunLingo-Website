@@ -49,7 +49,7 @@ export const FooterSection = (): React.JSX.Element => {
   return (
     <footer
       ref={sectionRef}
-      className="flex flex-col w-full items-center gap-8 sm:gap-10 pt-12 pb-6 px-4 sm:px-6 lg:px-8 xl:px-24 bg-transparent [background:radial-gradient(50%_50%_at_50%_138%,rgba(0,145,189,1)_0%,rgba(2,91,207,0.5)_24%,rgba(0,0,0,1)_100%)] overflow-hidden"
+      className="flex flex-col w-full items-center gap-8 sm:gap-10 pt-12 pb-6 px-4 sm:px-6 lg:px-8 xl:px-24 bg-transparent [background:radial-gradient(50%_50%_at_50%_138%,rgba(198,66,252,1)_0%,rgba(122,28,172,0.5)_24%,rgba(0,0,0,1)_100%)] overflow-hidden"
     >
       {/* Main Footer Content */}
       <div
@@ -59,14 +59,9 @@ export const FooterSection = (): React.JSX.Element => {
       >
         {/* Brand Section */}
         <div className="flex flex-col items-start gap-3 flex-1 max-w-sm animate-fade-in-up">
-          <div className="flex items-center justify-center w-fit mt-[-1.00px] bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,rgba(115,208,185,1)_40%,rgba(0,145,189,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-2xl sm:text-3xl lg:text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)] hover:scale-105 transition-transform duration-300 cursor-default">
-            <img src={logo} alt="" width={70} />
+          <div className="flex items-center justify-center w-fit mt-[-1.00px] bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,#C642FC_40%,#7A1CAC_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-2xl sm:text-3xl lg:text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)] hover:scale-105 transition-transform duration-300 cursor-default">
+            <img src={logo} alt="" width={170} />
           </div>
-
-          <p className="font-[number:var(--body-normal-regular-font-weight)] text-[length:var(--body-normal-regular-font-size)] leading-[var(--body-normal-regular-line-height)] flex items-center justify-center self-stretch font-body-normal-regular text-textbody tracking-[var(--body-normal-regular-letter-spacing)] [font-style:var(--body-normal-regular-font-style)] group hover:text-textwhite transition-colors duration-300">
-            Learn languages naturally <br />
-            through the content you love
-          </p>
 
           {/* Social Icons for Mobile */}
           <div className="lg:hidden flex items-center gap-4 mt-4">
@@ -109,7 +104,7 @@ export const FooterSection = (): React.JSX.Element => {
             className="flex flex-col items-start gap-4 animate-fade-in-up"
             style={{ animationDelay: "200ms" }}
           >
-            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#73d0b9] hover:to-[#0091bd] transition-all duration-300">
+            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#C642FC] hover:to-[#7A1CAC] transition-all duration-300">
               Quick Links
             </h3>
 
@@ -123,7 +118,7 @@ export const FooterSection = (): React.JSX.Element => {
                     <span className="relative z-10 group-hover/link:translate-x-1 transition-transform duration-300">
                       {link.label}
                     </span>
-                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] group-hover/link:w-full transition-all duration-300"></div>
+                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] group-hover/link:w-full transition-all duration-300"></div>
                   </a>
                 </li>
               ))}
@@ -135,7 +130,7 @@ export const FooterSection = (): React.JSX.Element => {
             className="flex flex-col items-start gap-4 animate-fade-in-up"
             style={{ animationDelay: "400ms" }}
           >
-            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#73d0b9] hover:to-[#0091bd] transition-all duration-300">
+            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#C642FC] hover:to-[#7A1CAC] transition-all duration-300">
               Information
             </h3>
 
@@ -149,7 +144,7 @@ export const FooterSection = (): React.JSX.Element => {
                     <span className="relative z-10 group-hover/link:translate-x-1 transition-transform duration-300">
                       {link.label}
                     </span>
-                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] group-hover/link:w-full transition-all duration-300"></div>
+                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] group-hover/link:w-full transition-all duration-300"></div>
                   </a>
                 </li>
               ))}
@@ -161,7 +156,7 @@ export const FooterSection = (): React.JSX.Element => {
             className="hidden lg:flex flex-col items-start gap-4 animate-fade-in-up"
             style={{ animationDelay: "600ms" }}
           >
-            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#73d0b9] hover:to-[#0091bd] transition-all duration-300">
+            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#C642FC] hover:to-[#7A1CAC] transition-all duration-300">
               Follow
             </h3>
 
@@ -177,7 +172,7 @@ export const FooterSection = (): React.JSX.Element => {
                     <span className="relative z-10 group-hover/link:translate-x-1 transition-transform duration-300">
                       {link.label}
                     </span>
-                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#73d0b9] to-[#0091bd] group-hover/link:w-full transition-all duration-300"></div>
+                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] group-hover/link:w-full transition-all duration-300"></div>
                   </a>
                 </li>
               ))}
@@ -200,9 +195,9 @@ export const FooterSection = (): React.JSX.Element => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-2 rounded-lg bg-[rgba(255,255,255,0.1)] border border-[#ffffff1a] text-textwhite placeholder-textbody focus:outline-none focus:border-[#0091bd] transition-colors duration-300"
+              className="flex-1 px-4 py-2 rounded-lg bg-[rgba(255,255,255,0.1)] border border-[#ffffff1a] text-textwhite placeholder-textbody focus:outline-none focus:border-[#C642FC] transition-colors duration-300"
             />
-            <button className="px-4 py-2 rounded-lg bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] text-textwhite font-body-normal-medium hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300">
+            <button className="px-4 py-2 rounded-lg bg-[linear-gradient(135deg,#C642FC_0%,#7A1CAC_100%)] text-textwhite font-body-normal-medium hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300">
               Subscribe
             </button>
           </div>
@@ -216,7 +211,7 @@ export const FooterSection = (): React.JSX.Element => {
         }`}
       >
         <p className="flex items-center justify-center w-fit font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] hover:scale-105 transition-transform duration-300 cursor-default">
-          ©2024 Funlingo. All rights reserved.
+          ©2025 Funlingo. All rights reserved.
         </p>
 
         {/* Additional Links */}
@@ -240,7 +235,7 @@ export const FooterSection = (): React.JSX.Element => {
       {/* Back to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[linear-gradient(135deg,rgba(2,91,207,1)_0%,rgba(0,145,189,1)_100%)] flex items-center justify-center text-textwhite shadow-lg hover:scale-110 hover:shadow-blue-500/30 transition-all duration-300 z-50 ${
+        className={`fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[linear-gradient(135deg,#C642FC_0%,#7A1CAC_100%)] flex items-center justify-center text-textwhite shadow-lg hover:scale-110 hover:shadow-purple-500/30 transition-all duration-300 z-50 ${
           isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
         }`}
         aria-label="Back to top"
