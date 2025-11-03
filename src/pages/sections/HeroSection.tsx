@@ -110,13 +110,13 @@ export const HeroSection = (): React.JSX.Element => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <div className="flex flex-col w-full items-start relative">
+        {/* <div className="flex flex-col w-full items-start relative">
           <div className="flex flex-col items-center px-4 sm:px-8 lg:px-[353.86px] py-0 relative self-stretch w-full">
             <h5 className="relative flex items-center justify-center self-stretch mt-[-1.00px] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-brandlime-green text-lg sm:text-xl lg:text-[length:var(--heading-h5-font-size)] text-center tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] [font-style:var(--heading-h5-font-style)] animate-pulse">
               Trusted by 1,000+ language learners worldwide
             </h5>
           </div>
-        </div>
+        </div> */}
 
         <div className="w-full max-w-4xl xl:max-w-[1120px] px-4 sm:px-8">
           <img
