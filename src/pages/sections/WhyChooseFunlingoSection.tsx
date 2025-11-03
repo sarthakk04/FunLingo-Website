@@ -139,14 +139,14 @@ export const WhyChooseFunlingoSection = (): React.JSX.Element => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <Badge className="inline-flex items-center justify-center px-6 py-2.5 rounded-[99px] border border-solid border-[#ffffff1a] shadow-[inset_0px_-1px_4px_#00000040,inset_0px_0px_0px_#e5e5e8] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] h-auto hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 animate-fade-in-up backdrop-blur-sm">
+        <Badge className="inline-flex items-center justify-center px-4 py-1.5 rounded-[99px] border border-solid border-[#ffffff1a] shadow-[inset_0px_-1px_4px_#00000040,inset_0px_0px_0px_#e5e5e8] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] h-auto hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 animate-fade-in-up backdrop-blur-sm">
           <Sparkles className="w-4 h-4 mr-2 text-textwhite" />
-          <span className="font-body-xs-medium text-textwhite text-sm sm:text-base">
+          <span className="font-body-xs-medium font-[number:var(--body-xs-medium-font-weight)] text-textwhite text-[length:var(--body-xs-medium-font-size)] tracking-[var(--body-xs-medium-letter-spacing)] leading-[var(--body-xs-medium-line-height)] [font-style:var(--body-xs-medium-font-style)]">
             Why Choose Funlingo
           </span>
         </Badge>
 
-        <h2 className="ffont-heading-h3 text-textwhite text-center text-2xl sm:text-3xl lg:text-4xl xl:text-[length:var(--heading-h3-font-size)] leading-tight sm:leading-normal">
+        <h2 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-center text-2xl sm:text-3xl lg:text-4xl xl:text-[length:var(--heading-h3-font-size)] tracking-[var(--heading-h3-letter-spacing)] leading-tight sm:leading-[var(--heading-h3-line-height)] [font-style:var(--heading-h3-font-style)]">
           Revolutionize Your
           <span className="bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] bg-clip-text text-transparent">
             {" "}
@@ -154,7 +154,7 @@ export const WhyChooseFunlingoSection = (): React.JSX.Element => {
           </span>
         </h2>
 
-        <p className="font-body-normal-regular text-textbody text-lg sm:text-xl lg:text-2xl max-w-3xl leading-relaxed">
+        <p className="font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-textbody text-base sm:text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)] max-w-3xl">
           Break free from traditional methods with our AI-powered platform that
           makes language learning intuitive, engaging, and remarkably effective.
         </p>
@@ -178,10 +178,10 @@ export const WhyChooseFunlingoSection = (): React.JSX.Element => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-heading-h6 text-textwhite text-2xl lg:text-3xl mb-3 group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-blue-300 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="font-heading-h6 font-[number:var(--heading-h6-font-weight)] text-textwhite text-[length:var(--heading-h6-font-size)] tracking-[var(--heading-h6-letter-spacing)] leading-[var(--heading-h6-line-height)] [font-style:var(--heading-h6-font-style)] mb-3 group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-blue-300 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     Smart Contextual Learning
                   </h3>
-                  <p className="font-body-normal-regular text-textbody text-lg leading-relaxed group-hover:text-textwhite/90 transition-colors duration-300">
+                  <p className="font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-textbody text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)] group-hover:text-textwhite/90 transition-colors duration-300">
                     Learn naturally through real conversations and authentic
                     content, not memorization. Our AI understands context and
                     helps you speak like a native.
@@ -205,10 +205,10 @@ export const WhyChooseFunlingoSection = (): React.JSX.Element => {
                   <stat.icon
                     className={`w-8 h-8 ${stat.color} mb-3 group-hover:scale-110 transition-transform duration-300`}
                   />
-                  <div className="font-heading-h3 text-white text-2xl lg:text-3xl font-bold mb-1">
+                  <div className="font-heading-h4 font-[number:var(--heading-h4-font-weight)] text-white text-[length:var(--heading-h4-font-size)] tracking-[var(--heading-h4-letter-spacing)] leading-[var(--heading-h4-line-height)] [font-style:var(--heading-h4-font-style)] font-bold mb-1">
                     {stat.value}
                   </div>
-                  <div className="font-body-small-regular text-textbody text-sm">
+                  <div className="font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-textbody text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)]">
                     {stat.label}
                   </div>
 
@@ -234,10 +234,10 @@ export const WhyChooseFunlingoSection = (): React.JSX.Element => {
                     <IconComponent className={`w-6 h-6 ${item.color}`} />
                   </div>
 
-                  <h3 className="font-heading-h6 text-textwhite text-lg lg:text-xl mb-3 group-hover:text-white transition-colors duration-300">
+                  <h3 className="font-heading-h6 font-[number:var(--heading-h6-font-weight)] text-textwhite text-[length:var(--heading-h6-font-size)] tracking-[var(--heading-h6-letter-spacing)] leading-[var(--heading-h6-line-height)] [font-style:var(--heading-h6-font-style)] mb-3 group-hover:text-white transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="font-body-normal-regular text-textbody text-sm lg:text-base leading-relaxed group-hover:text-textwhite/90 transition-colors duration-300 flex-1">
+                  <p className="font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-textbody text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)] group-hover:text-textwhite/90 transition-colors duration-300 flex-1">
                     {item.description}
                   </p>
 
@@ -272,10 +272,10 @@ export const WhyChooseFunlingoSection = (): React.JSX.Element => {
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="font-heading-h6 text-textwhite text-lg lg:text-xl mb-2 group-hover:text-white transition-colors duration-300">
+                    <h3 className="font-heading-h6 font-[number:var(--heading-h6-font-weight)] text-textwhite text-[length:var(--heading-h6-font-size)] tracking-[var(--heading-h6-letter-spacing)] leading-[var(--heading-h6-line-height)] [font-style:var(--heading-h6-font-style)] mb-2 group-hover:text-white transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="font-body-normal-regular text-textbody text-sm lg:text-base leading-relaxed group-hover:text-textwhite/90 transition-colors duration-300">
+                    <p className="font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-textbody text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)] group-hover:text-textwhite/90 transition-colors duration-300">
                       {item.description}
                     </p>
                   </div>
@@ -300,10 +300,10 @@ export const WhyChooseFunlingoSection = (): React.JSX.Element => {
             <div className="flex items-center gap-4">
               <Shield className="w-8 h-8 text-brandlime-green" />
               <div>
-                <div className="font-heading-h6 text-textwhite text-lg">
+                <div className="font-heading-h6 font-[number:var(--heading-h6-font-weight)] text-textwhite text-[length:var(--heading-h6-font-size)] tracking-[var(--heading-h6-letter-spacing)] leading-[var(--heading-h6-line-height)] [font-style:var(--heading-h6-font-style)]">
                   Trusted by 50,000+ Learners
                 </div>
-                <div className="font-body-normal-regular text-textbody text-sm">
+                <div className="font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-textbody text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)]">
                   Join our global community
                 </div>
               </div>
@@ -311,14 +311,14 @@ export const WhyChooseFunlingoSection = (): React.JSX.Element => {
 
             <div className="hidden lg:flex items-center gap-4">
               <Globe className="w-6 h-6 text-blue-400" />
-              <div className="font-body-normal-regular text-textbody text-sm">
+              <div className="font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-textbody text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)]">
                 120+ Countries
               </div>
             </div>
 
             <div className="hidden lg:flex items-center gap-4">
               <MessageCircle className="w-6 h-6 text-green-400" />
-              <div className="font-body-normal-regular text-textbody text-sm">
+              <div className="font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-textbody text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)]">
                 1M+ Conversations
               </div>
             </div>
@@ -335,7 +335,7 @@ export const WhyChooseFunlingoSection = (): React.JSX.Element => {
                 </div>
               ))}
             </div>
-            <div className="font-body-normal-regular text-textbody text-sm">
+            <div className="font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-textbody text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)]">
               4.9/5 Rating
             </div>
           </div>
