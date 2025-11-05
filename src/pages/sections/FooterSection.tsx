@@ -217,7 +217,7 @@ export const FooterSection = (): React.JSX.Element => {
         {/* Additional Links */}
         <div className="flex items-center gap-6">
           {[
-            { label: "Privacy Policy", href: "/privacy" },
+            { label: "Privacy Policy", href: "/privacy-policy" },
             { label: "Terms of Service", href: "/terms" },
             { label: "Cookie Policy", href: "/cookies" },
           ].map((link, index) => (

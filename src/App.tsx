@@ -10,6 +10,7 @@ import { Pricing } from "./pages/Pricing";
 import { Roadmap } from "./pages/Roadmap";
 import { Feedback } from "./pages/Feedback";
 import { About } from "./pages/About";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/roadmap" component={Roadmap} />
       <Route path="/feedback" component={Feedback} />
       <Route path="/about" component={About} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
