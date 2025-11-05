@@ -121,7 +121,7 @@ export const PrivacyPolicy = (): React.JSX.Element => {
             }`}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(122,28,172,0.2)] border border-[#7A1CAC]/30 text-textbody text-sm">
-              Effective Date: December 2024
+              Effective Date: November 2025
             </div>
           </div>
 
