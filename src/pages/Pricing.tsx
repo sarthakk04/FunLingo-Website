@@ -221,7 +221,7 @@ export const Pricing = (): React.JSX.Element => {
               className="font-body-small-regular text-textbody animate-fade-in-up"
               style={{ animationDelay: "200ms" }}
             >
-              Questions? Contact us at support@funlingo.com
+              Questions? Contact us at getfunlingo@gmail.com
             </p>
           </div>
 

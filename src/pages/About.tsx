@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-// import logo from "../assets/logo.png";
 import { useState, useEffect, useRef } from "react";
 import {
   Rocket,
@@ -13,19 +12,13 @@ import {
   Lightbulb,
 } from "lucide-react";
 import Navbar from "./sections/navbar";
+import Frame4 from "../assets/Frame4.png"; // Import the image
 
 export const About = (): React.JSX.Element => {
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  // const [isScrolled, setIsScrolled] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    // const handleScroll = () => {
-    //   setIsScrolled(window.scrollY > 50);
-    // };
-    // window.addEventListener("scroll", handleScroll);
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -40,7 +33,6 @@ export const About = (): React.JSX.Element => {
     }
 
     return () => {
-      // window.removeEventListener("scroll", handleScroll);
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
@@ -205,14 +197,67 @@ export const About = (): React.JSX.Element => {
             </div>
           </div>
 
-          {/* Stats Section */}
-          <div className="w-full">
+          {/* Image Demo Section - NEW SECTION ADDED */}
+          <div className="w-full max-w-6xl">
             <div
-              className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-1000 delay-500 ${
+              className={`flex flex-col items-center gap-8 transition-all duration-1000 delay-500 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
               }`}
+            >
+              <div className="text-center space-y-4 animate-fade-in-up">
+                <h3 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-2xl sm:text-3xl">
+                  See It In Action
+                </h3>
+                <p className="font-body-large-regular text-textbody text-[length:var(--body-large-regular-font-size)] leading-relaxed max-w-2xl">
+                  Experience how Funlingo transforms your favorite content into 
+                  engaging language lessons with dual subtitles
+                </p>
+              </div>
+
+              {/* Image Container with Hover Effects */}
+              <div
+                className="relative group animate-fade-in-up"
+                style={{ animationDelay: "600ms" }}
+              >
+                <div className="relative overflow-hidden rounded-2xl border border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] backdrop-blur-sm p-4 transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20 hover:border-[#C642FC]/40">
+                  {/* Gradient Border Effect on Hover */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm group-hover:blur-md"></div>
+                  
+                  {/* Main Image */}
+                  <img
+                    src={Frame4}
+                    alt="Funlingo in action showing dual subtitles on Netflix with Avengers"
+                    className="w-full h-auto rounded-xl shadow-2xl transition-transform duration-700 group-hover:scale-105"
+                  />
+                  
+                  {/* Shine Effect on Hover */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                </div>
+
+                {/* Floating Elements Animation */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#C642FC] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300 group-hover:animate-pulse"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#7A1CAC] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-500 group-hover:animate-bounce"></div>
+              </div>
+
+              {/* Caption */}
+              <div className="text-center animate-fade-in-up" style={{ animationDelay: "800ms" }}>
+                <p className="font-body-small-regular text-textbody text-sm italic">
+                  Learn new languages effortlessly while enjoying your favorite movies and series on Netflix and YouTube.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats Section - UPDATED DELAY */}
+          <div className="w-full">
+            <div
+              className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-1000 delay-700 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+            }`}
             >
               {stats.map((stat, index) => (
                 <div
@@ -240,10 +285,10 @@ export const About = (): React.JSX.Element => {
             </div>
           </div>
 
-          {/* Team Story Section */}
+          {/* Team Story Section - UPDATED DELAY */}
           <div className="w-full max-w-4xl">
             <div
-              className={`p-8 sm:p-12 rounded-2xl bg-[rgba(122,28,172,0.1)] border border-[#7A1CAC]/30 backdrop-blur-sm transition-all duration-1000 delay-700 ${
+              className={`p-8 sm:p-12 rounded-2xl bg-[rgba(122,28,172,0.1)] border border-[#7A1CAC]/30 backdrop-blur-sm transition-all duration-1000 delay-900 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
@@ -296,9 +341,9 @@ export const About = (): React.JSX.Element => {
             </div>
           </div>
 
-          {/* Call to Action */}
+          {/* Call to Action - UPDATED DELAY */}
           <div
-            className={`flex flex-col items-center gap-8 text-center transition-all duration-1000 delay-900 ${
+            className={`flex flex-col items-center gap-8 text-center transition-all duration-1000 delay-1100 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"

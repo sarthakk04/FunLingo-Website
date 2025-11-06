@@ -203,7 +203,7 @@ export const Feedback = (): React.JSX.Element => {
                   />
                 ),
                 title: "Email Us",
-                description: "support@funlingo.com",
+                description: "getfunlingo@gmail.com",
                 delay: "700ms",
               },
               {
