@@ -37,6 +37,9 @@ export default {
       fontFamily: {
         sans: ["Inter", ...fontFamily.sans],
         heading: ["Inter", ...fontFamily.sans],
+        "main-heading": ["main-heading", "sans-serif"],
+        "normal-heading": ["normal-heading", "sans-serif"],
+        "main-description": ["main-description", "sans-serif"],
       },
       fontSize: {
         "heading-h1": "var(--heading-h1-font-size)",

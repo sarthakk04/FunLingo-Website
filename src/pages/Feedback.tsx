@@ -3,28 +3,42 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import Navbar from "./sections/navbar";
-// import logo from "../assets/logo.png";
+
+// Define types for our form data
+interface FeedbackFormData {
+  name: string;
+  email: string;
+  category: string;
+  message: string;
+  uninstallReason: string;
+  missingFeatures: string[];
+  notWorkingProperly: boolean;
+  otherReason: string;
+  desiredFeature: string;
+  satisfaction: number;
+  recommend: string;
+}
 
 export const Feedback = (): React.JSX.Element => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FeedbackFormData>({
     name: "",
     email: "",
     category: "feature",
     message: "",
+    uninstallReason: "",
+    missingFeatures: [],
+    notWorkingProperly: false,
+    otherReason: "",
+    desiredFeature: "",
+    satisfaction: 5,
+    recommend: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  // const [isScrolled, setIsScrolled] = useState(false);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    // const handleScroll = () => {
-    //   setIsScrolled(window.scrollY > 50);
-    // };
-    // window.addEventListener("scroll", handleScroll);
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -39,7 +53,6 @@ export const Feedback = (): React.JSX.Element => {
     }
 
     return () => {
-      // window.removeEventListener("scroll", handleScroll);
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
@@ -50,7 +63,36 @@ export const Feedback = (): React.JSX.Element => {
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
-    setFormData({ name: "", email: "", category: "feature", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      category: "feature",
+      message: "",
+      uninstallReason: "",
+      missingFeatures: [],
+      notWorkingProperly: false,
+      otherReason: "",
+      desiredFeature: "",
+      satisfaction: 5,
+      recommend: "",
+    });
+  };
+
+  const handleCheckboxChange = (feature: string) => {
+    setFormData(prev => ({
+      ...prev,
+      missingFeatures: prev.missingFeatures.includes(feature)
+        ? prev.missingFeatures.filter(f => f !== feature)
+        : [...prev.missingFeatures, feature]
+    }));
+  };
+
+  const satisfactionLabels: { [key: number]: string } = {
+    1: "Very Dissatisfied",
+    2: "Dissatisfied",
+    3: "Neutral",
+    4: "Satisfied",
+    5: "Very Satisfied"
   };
 
   return (
@@ -72,15 +114,14 @@ export const Feedback = (): React.JSX.Element => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h1 className="font-heading-h1 font-[number:var(--heading-h1-font-weight)] text-textwhite text-3xl sm:text-4xl lg:text-5xl xl:text-[length:var(--heading-h1-font-size)] tracking-[var(--heading-h1-letter-spacing)] leading-tight sm:leading-[var(--heading-h1-line-height)] [font-style:var(--heading-h1-font-style)] animate-fade-in-up">
+            <h1 className="font-main-heading text-textwhite text-3xl sm:text-4xl lg:text-5xl xl:text-[length:var(--heading-h1-font-size)] tracking-[var(--heading-h1-letter-spacing)] leading-tight sm:leading-[var(--heading-h1-line-height)] animate-fade-in-up">
               We'd Love Your Feedback
             </h1>
             <p
-              className="font-body-large-regular font-[number:var(--body-large-regular-font-weight)] text-textbody text-lg sm:text-xl lg:text-[length:var(--body-large-regular-font-size)] tracking-[var(--body-large-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-large-regular-line-height)] [font-style:var(--body-large-regular-font-style)] max-w-2xl animate-fade-in-up"
+              className="font-main-description text-textbody text-lg sm:text-xl lg:text-[length:var(--body-large-regular-font-size)] tracking-[var(--body-large-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-large-regular-line-height)] max-w-2xl animate-fade-in-up"
               style={{ animationDelay: "200ms" }}
             >
-              Your input helps us build a better language learning experience
-              for everyone
+              Your input helps us build a better language learning experience for everyone
             </p>
           </div>
 
@@ -92,7 +133,7 @@ export const Feedback = (): React.JSX.Element => {
               }`}
               style={{ animationDelay: "300ms" }}
             >
-              <p className="font-body-normal-medium text-white text-center">
+              <p className="font-normal-heading text-white text-center">
                 Thank you for your feedback! We'll review it carefully.
               </p>
             </div>
@@ -108,40 +149,43 @@ export const Feedback = (): React.JSX.Element => {
             } border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] hover:bg-[rgba(255,255,255,0.08)] group hover:shadow-2xl hover:shadow-purple-500/10 animate-fade-in-up`}
             style={{ animationDelay: "400ms" }}
           >
-            <div className="flex flex-col gap-2">
-              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
-                Name
-              </label>
-              <Input
-                type="text"
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                required
-                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300"
-                placeholder="Your name"
-              />
+            {/* Basic Information */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex flex-col gap-2">
+                <label className="font-normal-heading text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                  Name
+                </label>
+                <Input
+                  type="text"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                  required
+                  className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300 font-main-description"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label className="font-normal-heading text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                  Email
+                </label>
+                <Input
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
+                  required
+                  className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300 font-main-description"
+                  placeholder="your.email@example.com"
+                />
+              </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
-                Email
-              </label>
-              <Input
-                type="email"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                required
-                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300"
-                placeholder="your.email@example.com"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+              <label className="font-normal-heading text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                 Category
               </label>
               <select
@@ -149,18 +193,143 @@ export const Feedback = (): React.JSX.Element => {
                 onChange={(e) =>
                   setFormData({ ...formData, category: e.target.value })
                 }
-                className="h-10 px-3 py-2 rounded-lg bg-[rgba(0,0,0,0.3)] border border-[#ffffff1a] text-textwhite font-body-normal-regular hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300"
+                className="h-10 px-3 py-2 rounded-lg bg-[rgba(0,0,0,0.3)] border border-[#ffffff1a] text-textwhite font-normal-heading hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300"
               >
                 <option value="feature">Feature Request</option>
                 <option value="bug">Bug Report</option>
                 <option value="improvement">Improvement Suggestion</option>
+                <option value="uninstall">Reason for Uninstalling</option>
                 <option value="other">Other</option>
               </select>
             </div>
 
+            {/* Satisfaction Rating */}
+            <div className="flex flex-col gap-3">
+              <label className="font-normal-heading text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                Overall Satisfaction
+              </label>
+              <div className="flex flex-col gap-2">
+                <input
+                  type="range"
+                  min="1"
+                  max="5"
+                  value={formData.satisfaction}
+                  onChange={(e) => setFormData({ ...formData, satisfaction: parseInt(e.target.value) })}
+                  className="w-full h-2 bg-[rgba(255,255,255,0.1)] rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-[#C642FC] [&::-webkit-slider-thumb]:to-[#7A1CAC]"
+                />
+                <div className="flex justify-between text-xs text-textbody font-main-description">
+                  <span>1 - Very Dissatisfied</span>
+                  <span className="text-textwhite font-medium">
+                    {formData.satisfaction} - {satisfactionLabels[formData.satisfaction]}
+                  </span>
+                  <span>5 - Very Satisfied</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Uninstall Reasons - Conditionally Shown */}
+            {formData.category === 'uninstall' && (
+              <div className="space-y-4 p-4 rounded-lg bg-[rgba(0,0,0,0.2)] border border-[#ffffff1a] animate-fade-in-up">
+                <h4 className="font-normal-heading text-textwhite mb-3">
+                  Why are you considering uninstalling?
+                </h4>
+                
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      id="missing-features"
+                      checked={formData.missingFeatures.includes('features')}
+                      onChange={() => handleCheckboxChange('features')}
+                      className="w-4 h-4 rounded border-[#ffffff1a] bg-[rgba(0,0,0,0.3)] text-[#C642FC] focus:ring-[#C642FC] focus:ring-2"
+                    />
+                    <label htmlFor="missing-features" className="font-main-description text-textwhite cursor-pointer">
+                      Missing features I need
+                    </label>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      id="not-working"
+                      checked={formData.notWorkingProperly}
+                      onChange={(e) => setFormData({ ...formData, notWorkingProperly: e.target.checked })}
+                      className="w-4 h-4 rounded border-[#ffffff1a] bg-[rgba(0,0,0,0.3)] text-[#C642FC] focus:ring-[#C642FC] focus:ring-2"
+                    />
+                    <label htmlFor="not-working" className="font-main-description text-textwhite cursor-pointer">
+                      Not working properly
+                    </label>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      id="other-reason"
+                      checked={formData.missingFeatures.includes('other')}
+                      onChange={() => handleCheckboxChange('other')}
+                      className="w-4 h-4 rounded border-[#ffffff1a] bg-[rgba(0,0,0,0.3)] text-[#C642FC] focus:ring-[#C642FC] focus:ring-2"
+                    />
+                    <label htmlFor="other-reason" className="font-main-description text-textwhite cursor-pointer">
+                      Other reasons
+                    </label>
+                  </div>
+
+                  {formData.missingFeatures.includes('other') && (
+                    <div className="mt-2 animate-fade-in-up">
+                      <Input
+                        type="text"
+                        value={formData.otherReason}
+                        onChange={(e) => setFormData({ ...formData, otherReason: e.target.value })}
+                        className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300 font-main-description"
+                        placeholder="Please specify other reasons..."
+                      />
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Feature Request Section */}
             <div className="flex flex-col gap-2">
-              <label className="font-body-normal-medium text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
-                Your Feedback
+              <label className="font-normal-heading text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                {formData.category === 'feature' ? 'Feature Details' : 'Any Feature You\'d Like Us to Build?'}
+              </label>
+              <Input
+                type="text"
+                value={formData.desiredFeature}
+                onChange={(e) => setFormData({ ...formData, desiredFeature: e.target.value })}
+                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300 font-main-description"
+                placeholder={
+                  formData.category === 'feature' 
+                    ? "Describe the feature you'd like to see..."
+                    : "What feature would make you reconsider?"
+                }
+              />
+            </div>
+
+            {/* Recommendation */}
+            <div className="flex flex-col gap-2">
+              <label className="font-normal-heading text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                Would you recommend FunLingo to others?
+              </label>
+              <select
+                value={formData.recommend}
+                onChange={(e) => setFormData({ ...formData, recommend: e.target.value })}
+                className="h-10 px-3 py-2 rounded-lg bg-[rgba(0,0,0,0.3)] border border-[#ffffff1a] text-textwhite font-normal-heading hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300"
+              >
+                <option value="">Select an option</option>
+                <option value="definitely">Definitely yes</option>
+                <option value="probably">Probably yes</option>
+                <option value="unsure">Not sure</option>
+                <option value="probably-not">Probably not</option>
+                <option value="definitely-not">Definitely not</option>
+              </select>
+            </div>
+
+            {/* Main Message */}
+            <div className="flex flex-col gap-2">
+              <label className="font-normal-heading text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                Additional Comments
               </label>
               <Textarea
                 value={formData.message}
@@ -168,8 +337,8 @@ export const Feedback = (): React.JSX.Element => {
                   setFormData({ ...formData, message: e.target.value })
                 }
                 required
-                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300 min-h-[200px] resize-vertical"
-                placeholder="Tell us what's on your mind..."
+                className="bg-[rgba(0,0,0,0.3)] border-[#ffffff1a] text-textwhite placeholder:text-textbody hover:border-[#ffffff40] focus:border-[#C642FC] transition-all duration-300 min-h-[120px] resize-vertical font-main-description"
+                placeholder="Share any additional thoughts, suggestions, or details..."
               />
             </div>
 
@@ -177,7 +346,7 @@ export const Feedback = (): React.JSX.Element => {
               type="submit"
               className="w-full bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-12 px-6 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group/btn overflow-hidden relative mt-2"
             >
-              <span className="relative z-10 font-body-normal-medium text-textwhite group-hover/btn:scale-105 transition-transform duration-300">
+              <span className="relative z-10 font-normal-heading text-textwhite group-hover/btn:scale-105 transition-transform duration-300">
                 Submit Feedback
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
@@ -205,37 +374,41 @@ export const Feedback = (): React.JSX.Element => {
                 title: "Email Us",
                 description: "getfunlingo@gmail.com",
                 delay: "700ms",
+                link: "mailto:getfunlingo@gmail.com"
               },
               {
                 icon: (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
+                  <>
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </>
                 ),
-                title: "Discord",
-                description: "Join our community",
+                title: "Instagram",
+                description: "@getfunlingo",
                 delay: "800ms",
+                link: "https://www.instagram.com/getfunlingo?igsh=MWVkcWQ5Nmh0YmZqdA=="
               },
               {
                 icon: (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
+                  <>
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </>
                 ),
-                title: "Vote on Features",
-                description: "Check our roadmap",
+                title: "LinkedIn",
+                description: "Follow our page",
                 delay: "900ms",
+                link: "https://www.linkedin.com/company/getfunlingo/"
               },
             ].map((item, index) => (
-              <div
+              <a
                 key={index}
-                className="flex flex-col items-center gap-3 p-6 rounded-xl border border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] backdrop-blur-sm text-center group hover:bg-[rgba(255,255,255,0.08)] hover:border-[#ffffff40] hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 animate-fade-in-up"
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-3 p-6 rounded-xl border border-[#ffffff1a] bg-[rgba(255,255,255,0.05)] backdrop-blur-sm text-center group hover:bg-[rgba(255,255,255,0.08)] hover:border-[#ffffff40] hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 animate-fade-in-up no-underline"
                 style={{ animationDelay: item.delay }}
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-[#C642FC] to-[#7A1CAC] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -248,13 +421,13 @@ export const Feedback = (): React.JSX.Element => {
                     {item.icon}
                   </svg>
                 </div>
-                <h4 className="font-heading-h6 text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                <h4 className="font-normal-heading text-textwhite group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                   {item.title}
                 </h4>
-                <p className="font-body-small-regular text-textbody group-hover:text-textwhite transition-colors duration-300">
+                <p className="font-main-description text-textbody group-hover:text-textwhite transition-colors duration-300">
                   {item.description}
                 </p>
-              </div>
+              </a>
             ))}
           </div>
         </div>

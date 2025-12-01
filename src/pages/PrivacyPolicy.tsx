@@ -98,12 +98,12 @@ export const PrivacyPolicy = (): React.JSX.Element => {
               Your Privacy Matters
             </div>
 
-            <h1 className="font-heading-h1 font-[number:var(--heading-h1-font-weight)] text-textwhite text-3xl sm:text-4xl lg:text-5xl xl:text-[length:var(--heading-h1-font-size)] tracking-[var(--heading-h1-letter-spacing)] leading-tight sm:leading-[var(--heading-h1-line-height)] [font-style:var(--heading-h1-font-style)] animate-fade-in-up">
+            <h1 className="font-main-heading text-textwhite text-3xl sm:text-4xl lg:text-5xl xl:text-[length:var(--heading-h1-font-size)] tracking-[var(--heading-h1-letter-spacing)] leading-tight sm:leading-[var(--heading-h1-line-height)] animate-fade-in-up">
               Privacy Policy
             </h1>
 
             <p
-              className="font-body-large-regular font-[number:var(--body-large-regular-font-weight)] text-textbody text-lg sm:text-xl lg:text-[length:var(--body-large-regular-font-size)] tracking-[var(--body-large-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-large-regular-line-height)] [font-style:var(--body-large-regular-font-style)] max-w-3xl animate-fade-in-up"
+              className="font-main-description text-textbody text-lg sm:text-xl lg:text-[length:var(--body-large-regular-font-size)] tracking-[var(--body-large-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-large-regular-line-height)] max-w-3xl animate-fade-in-up"
               style={{ animationDelay: "200ms" }}
             >
               Welcome to Funlingo. Your privacy is important to us. This Privacy
@@ -120,7 +120,7 @@ export const PrivacyPolicy = (): React.JSX.Element => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(122,28,172,0.2)] border border-[#7A1CAC]/30 text-textbody text-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(122,28,172,0.2)] border border-[#7A1CAC]/30 text-textbody text-sm font-main-description">
               Effective Date: November 2025
             </div>
           </div>
@@ -139,11 +139,11 @@ export const PrivacyPolicy = (): React.JSX.Element => {
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="font-body-normal-medium text-textwhite text-xl mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                    <h3 className="font-normal-heading text-textwhite text-xl mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                       {section.title}
                     </h3>
 
-                    <p className="font-body-normal-regular text-textbody text-[length:var(--body-normal-regular-font-size)] leading-relaxed">
+                    <p className="font-main-description text-textbody text-[length:var(--body-normal-regular-font-size)] leading-relaxed">
                       {section.content}
                     </p>
                   </div>
@@ -167,18 +167,18 @@ export const PrivacyPolicy = (): React.JSX.Element => {
                   Get In Touch
                 </div>
 
-                <h3 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-2xl sm:text-3xl">
+                <h3 className="font-main-heading text-textwhite text-2xl sm:text-3xl">
                   Contact Us
                 </h3>
 
-                <div className="space-y-4 font-body-normal-regular text-textbody text-[length:var(--body-normal-regular-font-size)] leading-relaxed max-w-2xl mx-auto">
+                <div className="space-y-4 font-main-description text-textbody text-[length:var(--body-normal-regular-font-size)] leading-relaxed max-w-2xl mx-auto">
                   <p>
                     If you have questions or concerns about this Privacy Policy,
                     please contact us at:
                   </p>
 
                   <div className="flex justify-center">
-                    <Button className="bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] text-textwhite font-body-normal-medium h-12 px-8 py-3 rounded-lg border border-[#ffffff1a] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group">
+                    <Button className="bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] text-textwhite font-normal-heading h-12 px-8 py-3 rounded-lg border border-[#ffffff1a] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group">
                       <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                       getfunlingo@gmail.com
                     </Button>
@@ -198,7 +198,7 @@ export const PrivacyPolicy = (): React.JSX.Element => {
           >
             <div className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-[rgba(198,66,252,0.1)] border border-[#C642FC]/20">
               <Shield className="w-5 h-5 text-[#C642FC]" />
-              <p className="font-body-normal-medium text-textwhite">
+              <p className="font-main-description text-textwhite">
                 Funlingo is committed to making language learning through
                 streaming safe, private, and effortless.
               </p>

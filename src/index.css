@@ -300,50 +300,6 @@
   }
 }
 
-/* Font classes */
-.font-heading-h1 {
-  font-family: var(--heading-h1-font-family);
-}
-
-.font-heading-h3 {
-  font-family: var(--heading-h3-font-family);
-}
-
-.font-heading-h4 {
-  font-family: var(--heading-h4-font-family);
-}
-
-.font-heading-h5 {
-  font-family: var(--heading-h5-font-family);
-}
-
-.font-heading-h6 {
-  font-family: var(--heading-h6-font-family);
-}
-
-.font-body-large-regular {
-  font-family: var(--body-large-regular-font-family);
-}
-
-.font-body-normal-medium {
-  font-family: var(--body-normal-medium-font-family);
-}
-
-.font-body-normal-regular {
-  font-family: var(--body-normal-regular-font-family);
-}
-
-.font-body-small-medium {
-  font-family: var(--body-small-medium-font-family);
-}
-
-.font-body-small-regular {
-  font-family: var(--body-small-regular-font-family);
-}
-
-.font-body-xs-medium {
-  font-family: var(--body-xs-medium-font-family);
-}
 
 /* Color classes */
 .text-textwhite {
@@ -365,3 +321,28 @@
 .bg-backgroundbackdrop {
   background-color: var(--backgroundbackdrop);
 }
+
+Button{
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: main-heading; /* set name */
+  src: url(./fonts/Poppins-Black.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: normal-heading; /* set name */
+  src: url(./fonts/Poppins-SemiBold.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: main-description;
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
+

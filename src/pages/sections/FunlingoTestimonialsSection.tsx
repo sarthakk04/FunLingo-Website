@@ -126,13 +126,13 @@ export const FunlingoTestimonialsSection = (): React.JSX.Element => {
         }`}
       >
         <Badge className="inline-flex items-center justify-center px-4 py-1.5 relative flex-[0_0_auto] rounded-[99px] border border-solid border-[#ffffff1a] shadow-[inset_0px_-1px_4px_#00000040,inset_0px_0px_0px_#e5e5e8] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] h-auto hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 animate-fade-in-up">
-          <span className="relative flex items-center justify-center w-fit mt-[-1.00px] font-body-xs-medium font-[number:var(--body-xs-medium-font-weight)] text-textwhite text-[length:var(--body-xs-medium-font-size)] tracking-[var(--body-xs-medium-letter-spacing)] leading-[var(--body-xs-medium-line-height)] whitespace-nowrap [font-style:var(--body-xs-medium-font-style)]">
+          <span className="relative flex items-center justify-center w-fit mt-[-1.00px] font-main-description text-textwhite text-[length:var(--body-xs-medium-font-size)] tracking-[var(--body-xs-medium-letter-spacing)] leading-[var(--body-xs-medium-line-height)] whitespace-nowrap">
             Testimonials
           </span>
         </Badge>
 
         <h2
-          className="relative flex items-center justify-center w-full max-w-2xl font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-2xl sm:text-3xl lg:text-4xl xl:text-[length:var(--heading-h3-font-size)] text-center tracking-[var(--heading-h3-letter-spacing)] leading-tight sm:leading-[var(--heading-h3-line-height)] [font-style:var(--heading-h3-font-style)] animate-fade-in-up"
+          className="relative flex items-center justify-center w-full max-w-2xl font-main-heading text-textwhite text-2xl sm:text-3xl lg:text-4xl xl:text-[length:var(--heading-h3-font-size)] text-center tracking-[var(--heading-h3-letter-spacing)] leading-tight sm:leading-[var(--heading-h3-line-height)] animate-fade-in-up"
           style={{ animationDelay: "200ms" }}
         >
           Language Learners Love Funlingo
@@ -227,10 +227,10 @@ export const FunlingoTestimonialsSection = (): React.JSX.Element => {
             className="flex flex-col items-center text-center animate-fade-in-up"
             style={{ animationDelay: `${800 + index * 100}ms` }}
           >
-            <div className="font-heading-h4 text-textwhite text-xl sm:text-2xl font-bold">
+            <div className="font-normal-heading text-textwhite text-xl sm:text-2xl font-bold">
               {stat.number}
             </div>
-            <div className="font-body-small-regular text-textbody text-sm sm:text-base">
+            <div className="font-main-description text-textbody text-sm sm:text-base">
               {stat.label}
             </div>
           </div>
@@ -303,7 +303,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
         {/* Quote Text */}
         <p
-          className={`relative flex items-center justify-center self-stretch mt-[-1.00px] font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textwhite text-sm sm:text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-relaxed sm:leading-[var(--body-normal-medium-line-height)] [font-style:var(--body-normal-medium-font-style)] group-hover:text-white transition-colors duration-300 ${
+          className={`relative flex items-center justify-center self-stretch mt-[-1.00px] font-main-description text-textwhite text-sm sm:text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-relaxed sm:leading-[var(--body-normal-medium-line-height)] group-hover:text-white transition-colors duration-300 ${
             isHovered ? "transform translate-x-1" : ""
           }`}
         >
@@ -318,7 +318,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
               className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400"
             />
           ))}
-          <span className="ml-2 font-body-small-medium text-textwhite text-sm">
+          <span className="ml-2 font-normal-heading text-textwhite text-sm">
             5.0
           </span>
         </div>
@@ -334,11 +334,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           </Avatar>
 
           <div className="flex flex-col items-start relative flex-1 grow">
-            <p className="relative flex items-center justify-center self-stretch mt-[-1.00px] font-body-small-medium text-textwhite text-[length:var(--body-small-medium-font-size)] leading-[var(--body-small-medium-line-height)] font-[number:var(--body-small-medium-font-weight)] tracking-[var(--body-small-medium-letter-spacing)] [font-style:var(--body-small-medium-font-style)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+            <p className="relative flex items-center justify-center self-stretch mt-[-1.00px] font-normal-heading text-textwhite text-[length:var(--body-small-medium-font-size)] leading-[var(--body-small-medium-line-height)] tracking-[var(--body-small-medium-letter-spacing)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
               {testimonial.name}
             </p>
 
-            <p className="relative flex items-center justify-center self-stretch font-body-small-regular font-[number:var(--body-small-regular-font-weight)] text-textbody text-[length:var(--body-small-regular-font-size)] tracking-[var(--body-small-regular-letter-spacing)] leading-[var(--body-small-regular-line-height)] [font-style:var(--body-small-regular-font-style)] group-hover:text-textwhite transition-colors duration-300">
+            <p className="relative flex items-center justify-center self-stretch font-main-description text-textbody text-[length:var(--body-small-regular-font-size)] tracking-[var(--body-small-regular-letter-spacing)] leading-[var(--body-small-regular-line-height)] group-hover:text-textwhite transition-colors duration-300">
               {testimonial.role}
             </p>
           </div>

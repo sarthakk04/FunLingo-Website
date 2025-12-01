@@ -10,14 +10,6 @@ import { WhyChooseFunlingoSection } from "./sections/WhyChooseFunlingoSection";
 // import { useState, useEffect } from "react";
 import Navbar from "./sections/navbar";
 
-// const navItems = [
-//   { label: "Home", href: "/", active: true },
-//   { label: "Pricing", href: "/pricing" },
-//   { label: "Roadmap", href: "/roadmap" },
-//   { label: "Feedback", href: "/feedback" },
-//   { label: "About", href: "/about" },
-// ];
-
 const featureBadges = [
   {
     icon: "/figmaAssets/svg-12.svg",
@@ -35,14 +27,6 @@ const featureBadges = [
     icon: "/figmaAssets/svg-5.svg",
     text: "Works on YouTube & Netflix",
   },
-  // {
-  //   icon: "/figmaAssets/svg-12.svg",
-  //   text: "Multiple languages",
-  // },
-  // {
-  //   icon: "/figmaAssets/svg-1.svg",
-  //   text: "Smart AI translations",
-  // },
 ];
 
 export const HomeDesktop = (): React.JSX.Element => {
@@ -66,7 +50,7 @@ export const HomeDesktop = (): React.JSX.Element => {
                   alt="Feature icon"
                   src={badge.icon}
                 />
-                <p className="relative flex items-center justify-center w-fit font-body-small-regular font-[number:var(--body-small-regular-font-weight)] text-textwhite text-[length:var(--body-small-regular-font-size)] tracking-[var(--body-small-regular-letter-spacing)] leading-[var(--body-small-regular-line-height)] whitespace-nowrap [font-style:var(--body-small-regular-font-style)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                <p className="relative flex items-center justify-center w-fit font-main-description text-textwhite text-[length:var(--body-small-regular-font-size)] tracking-[var(--body-small-regular-letter-spacing)] leading-[var(--body-small-regular-line-height)] whitespace-nowrap group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                   {badge.text}
                 </p>
               </div>

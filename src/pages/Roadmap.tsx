@@ -209,11 +209,11 @@ export const Roadmap = (): React.JSX.Element => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h1 className="font-heading-h1 font-[number:var(--heading-h1-font-weight)] text-textwhite text-3xl sm:text-4xl lg:text-5xl xl:text-[length:var(--heading-h1-font-size)] tracking-[var(--heading-h1-letter-spacing)] leading-tight sm:leading-[var(--heading-h1-line-height)] [font-style:var(--heading-h1-font-style)] animate-fade-in-up">
+            <h1 className="font-main-heading text-textwhite text-3xl sm:text-4xl lg:text-5xl xl:text-[length:var(--heading-h1-font-size)] tracking-[var(--heading-h1-letter-spacing)] leading-tight sm:leading-[var(--heading-h1-line-height)] animate-fade-in-up">
               Product Roadmap
             </h1>
             <p
-              className="font-body-large-regular font-[number:var(--body-large-regular-font-weight)] text-textbody text-lg sm:text-xl lg:text-[length:var(--body-large-regular-font-size)] tracking-[var(--body-large-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-large-regular-line-height)] [font-style:var(--body-large-regular-font-style)] max-w-2xl animate-fade-in-up"
+              className="font-main-description text-textbody text-lg sm:text-xl lg:text-[length:var(--body-large-regular-font-size)] tracking-[var(--body-large-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-large-regular-line-height)] max-w-2xl animate-fade-in-up"
               style={{ animationDelay: "200ms" }}
             >
               Follow our journey as we build the future of language learning
@@ -237,7 +237,7 @@ export const Roadmap = (): React.JSX.Element => {
               >
                 {/* Quarter Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4 group">
-                  <h3 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-xl sm:text-2xl lg:text-[length:var(--heading-h3-font-size)] tracking-[var(--heading-h3-letter-spacing)] leading-[var(--heading-h3-line-height)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-500">
+                  <h3 className="font-main-heading text-textwhite text-xl sm:text-2xl lg:text-[length:var(--heading-h3-font-size)] tracking-[var(--heading-h3-letter-spacing)] leading-[var(--heading-h3-line-height)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-500">
                     {quarter.quarter}
                   </h3>
                   <Badge
@@ -245,7 +245,7 @@ export const Roadmap = (): React.JSX.Element => {
                       quarter.status
                     )}`}
                   >
-                    <span className="font-body-xs-medium">
+                    <span className="font-main-description text-xs font-medium">
                       {quarter.status}
                     </span>
                   </Badge>
@@ -279,10 +279,10 @@ export const Roadmap = (): React.JSX.Element => {
                           )}
                         </div>
                         <div className="flex flex-col gap-2 flex-grow">
-                          <h4 className="font-heading-h6 font-[number:var(--heading-h6-font-weight)] text-textwhite text-[length:var(--heading-h6-font-size)] tracking-[var(--heading-h6-letter-spacing)] leading-[var(--heading-h6-line-height)] group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#C642FC] group-hover/item:to-[#7A1CAC] transition-all duration-500">
+                          <h4 className="font-normal-heading text-textwhite text-[length:var(--heading-h6-font-size)] tracking-[var(--heading-h6-letter-spacing)] leading-[var(--heading-h6-line-height)] group-hover/item:text-transparent group-hover/item:bg-clip-text group-hover/item:bg-gradient-to-r group-hover/item:from-[#C642FC] group-hover/item:to-[#7A1CAC] transition-all duration-500">
                             {item.title}
                           </h4>
-                          <p className="font-body-small-regular text-textbody group-hover/item:text-textwhite transition-colors duration-500">
+                          <p className="font-main-description text-textbody group-hover/item:text-textwhite transition-colors duration-500">
                             {item.description}
                           </p>
                         </div>
@@ -326,22 +326,22 @@ export const Roadmap = (): React.JSX.Element => {
             }`}
           >
             <div className="p-8 rounded-2xl border border-[#C642FC] bg-[rgba(198,66,252,0.1)] backdrop-blur-sm max-w-2xl">
-              <h3 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-[length:var(--heading-h3-font-size)] tracking-[var(--heading-h3-letter-spacing)] leading-[var(--heading-h3-line-height)] mb-4">
+              <h3 className="font-main-heading text-textwhite text-[length:var(--heading-h3-font-size)] tracking-[var(--heading-h3-letter-spacing)] leading-[var(--heading-h3-line-height)] mb-4">
                 Help Shape Our Future
               </h3>
-              <p className="font-body-large-regular text-textbody mb-6">
+              <p className="font-main-description text-textbody mb-6">
                 Your feedback drives our development. Tell us what features
                 you'd love to see next!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group overflow-hidden relative">
-                  <span className="relative z-10 font-body-normal-medium text-textwhite">
+                  <span className="relative z-10 font-normal-heading text-textwhite">
                     Submit Feature Request
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Button>
                 <Button className="bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] h-12 px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 border border-[#ffffff1a]">
-                  <span className="font-body-normal-medium text-textwhite">
+                  <span className="font-normal-heading text-textwhite">
                     Join Beta Testing
                   </span>
                 </Button>

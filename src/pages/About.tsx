@@ -12,7 +12,7 @@ import {
   Lightbulb,
 } from "lucide-react";
 import Navbar from "./sections/navbar";
-import Frame4 from "../assets/Frame4.png"; // Import the image
+// import Frame4 from "../assets/Frame4.png"; // Import the image
 
 export const About = (): React.JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
@@ -117,12 +117,12 @@ export const About = (): React.JSX.Element => {
               Our Story
             </div>
 
-            <h1 className="font-heading-h1 font-[number:var(--heading-h1-font-weight)] text-textwhite text-3xl sm:text-4xl lg:text-5xl xl:text-[length:var(--heading-h1-font-size)] tracking-[var(--heading-h1-letter-spacing)] leading-tight sm:leading-[var(--heading-h1-line-height)] [font-style:var(--heading-h1-font-style)] animate-fade-in-up">
+            <h1 className="font-main-heading text-textwhite text-3xl sm:text-4xl lg:text-5xl xl:text-[length:var(--heading-h1-font-size)] tracking-[var(--heading-h1-letter-spacing)] leading-tight sm:leading-[var(--heading-h1-line-height)] animate-fade-in-up">
               About Funlingo
             </h1>
 
             <p
-              className="font-body-large-regular font-[number:var(--body-large-regular-font-weight)] text-textbody text-lg sm:text-xl lg:text-[length:var(--body-large-regular-font-size)] tracking-[var(--body-large-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-large-regular-line-height)] [font-style:var(--body-large-regular-font-style)] max-w-3xl animate-fade-in-up"
+              className="font-main-description text-textbody text-lg sm:text-xl lg:text-[length:var(--body-large-regular-font-size)] tracking-[var(--body-large-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-large-regular-line-height)] max-w-3xl animate-fade-in-up"
               style={{ animationDelay: "200ms" }}
             >
               Making language learning natural, effortless, and fun through the
@@ -141,11 +141,11 @@ export const About = (): React.JSX.Element => {
             >
               {/* Mission Text */}
               <div className="space-y-6 animate-fade-in-up">
-                <h3 className="font-heading-h2 font-[number:var(--heading-h2-font-weight)] text-textwhite text-2xl sm:text-3xl lg:text-[length:var(--heading-h2-font-size)] tracking-[var(--heading-h2-letter-spacing)] leading-[var(--heading-h2-line-height)] [font-style:var(--heading-h2-font-style)]">
+                <h3 className="font-main-heading text-textwhite text-2xl sm:text-3xl lg:text-[length:var(--heading-h2-font-size)] tracking-[var(--heading-h2-letter-spacing)] leading-[var(--heading-h2-line-height)]">
                   Our Mission
                 </h3>
 
-                <div className="space-y-4 font-body-normal-regular text-textbody text-[length:var(--body-normal-regular-font-size)] leading-relaxed">
+                <div className="space-y-4 font-main-description text-textbody text-[length:var(--body-normal-regular-font-size)] leading-relaxed">
                   <p>
                     Funlingo was born from a simple idea: language learning
                     shouldn't feel like studying. By integrating seamlessly with
@@ -184,11 +184,11 @@ export const About = (): React.JSX.Element => {
                       <div className="text-white">{value.icon}</div>
                     </div>
 
-                    <h4 className="font-body-normal-medium text-textwhite text-lg mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                    <h4 className="font-normal-heading text-textwhite text-lg mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                       {value.title}
                     </h4>
 
-                    <p className="font-body-normal-regular text-textbody text-sm leading-relaxed">
+                    <p className="font-main-description text-textbody text-sm leading-relaxed">
                       {value.description}
                     </p>
                   </div>
@@ -207,10 +207,10 @@ export const About = (): React.JSX.Element => {
               }`}
             >
               <div className="text-center space-y-4 animate-fade-in-up">
-                <h3 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-2xl sm:text-3xl">
+                <h3 className="font-main-heading text-textwhite text-2xl sm:text-3xl">
                   See It In Action
                 </h3>
-                <p className="font-body-large-regular text-textbody text-[length:var(--body-large-regular-font-size)] leading-relaxed max-w-2xl">
+                <p className="font-main-description text-textbody text-[length:var(--body-large-regular-font-size)] leading-relaxed max-w-2xl">
                   Experience how Funlingo transforms your favorite content into 
                   engaging language lessons with dual subtitles
                 </p>
@@ -227,7 +227,7 @@ export const About = (): React.JSX.Element => {
                   
                   {/* Main Image */}
                   <img
-                    src={Frame4}
+                    src="./figmaAssets/heroImg2.png"
                     alt="Funlingo in action showing dual subtitles on Netflix with Avengers"
                     className="w-full h-auto rounded-xl shadow-2xl transition-transform duration-700 group-hover:scale-105"
                   />
@@ -243,7 +243,7 @@ export const About = (): React.JSX.Element => {
 
               {/* Caption */}
               <div className="text-center animate-fade-in-up" style={{ animationDelay: "800ms" }}>
-                <p className="font-body-small-regular text-textbody text-sm italic">
+                <p className="font-main-description text-textbody text-sm italic">
                   Learn new languages effortlessly while enjoying your favorite movies and series on Netflix and YouTube.
                 </p>
               </div>
@@ -269,15 +269,15 @@ export const About = (): React.JSX.Element => {
                     <div className="text-[#C642FC]">{stat.icon}</div>
                   </div>
 
-                  <div className="font-heading-h1 font-[number:var(--heading-h1-font-weight)] text-textwhite text-3xl sm:text-4xl lg:text-[length:var(--heading-h1-font-size)] mb-2 group-hover:scale-110 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                  <div className="font-main-heading text-textwhite text-3xl sm:text-4xl lg:text-[length:var(--heading-h1-font-size)] mb-2 group-hover:scale-110 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                     {stat.number}
                   </div>
 
-                  <h4 className="font-body-normal-medium text-textwhite text-lg mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
+                  <h4 className="font-normal-heading text-textwhite text-lg mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-300">
                     {stat.label}
                   </h4>
 
-                  <p className="font-body-normal-regular text-textbody text-sm">
+                  <p className="font-main-description text-textbody text-sm">
                     {stat.description}
                   </p>
                 </div>
@@ -300,11 +300,11 @@ export const About = (): React.JSX.Element => {
                   Behind the Scenes
                 </div>
 
-                <h3 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-2xl sm:text-3xl">
+                <h3 className="font-main-heading text-textwhite text-2xl sm:text-3xl">
                   The Team Behind Funlingo
                 </h3>
 
-                <div className="space-y-4 font-body-normal-regular text-textbody text-[length:var(--body-normal-regular-font-size)] leading-relaxed max-w-3xl mx-auto">
+                <div className="space-y-4 font-main-description text-textbody text-[length:var(--body-normal-regular-font-size)] leading-relaxed max-w-3xl mx-auto">
                   <p>
                     We're a passionate team of language enthusiasts, AI
                     researchers, and product builders who believe that learning
@@ -324,15 +324,15 @@ export const About = (): React.JSX.Element => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                  <div className="flex items-center justify-center gap-2 font-body-small-regular text-textbody text-sm">
+                  <div className="flex items-center justify-center gap-2 font-main-description text-textbody text-sm">
                     <div className="w-2 h-2 bg-[#C642FC] rounded-full animate-pulse"></div>
                     Remote First Team
                   </div>
-                  <div className="flex items-center justify-center gap-2 font-body-small-regular text-textbody text-sm">
+                  <div className="flex items-center justify-center gap-2 font-main-description text-textbody text-sm">
                     <div className="w-2 h-2 bg-[#7A1CAC] rounded-full animate-pulse"></div>
                     Global Community
                   </div>
-                  <div className="flex items-center justify-center gap-2 font-body-small-regular text-textbody text-sm">
+                  <div className="flex items-center justify-center gap-2 font-main-description text-textbody text-sm">
                     <div className="w-2 h-2 bg-[#C642FC] rounded-full animate-pulse"></div>
                     User-Focused Development
                   </div>
@@ -350,11 +350,11 @@ export const About = (): React.JSX.Element => {
             }`}
           >
             <div className="space-y-4 max-w-2xl animate-fade-in-up">
-              <h3 className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-2xl sm:text-3xl">
+              <h3 className="font-main-heading text-textwhite text-2xl sm:text-3xl">
                 Join Our Journey
               </h3>
 
-              <p className="font-body-large-regular text-textbody text-[length:var(--body-large-regular-font-size)] leading-relaxed">
+              <p className="font-main-description text-textbody text-[length:var(--body-large-regular-font-size)] leading-relaxed">
                 We're just getting started. Be part of the revolution in
                 language learning and help us make Funlingo better for everyone.
               </p>
@@ -364,15 +364,22 @@ export const About = (): React.JSX.Element => {
               className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
               style={{ animationDelay: "200ms" }}
             >
-              <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group/btn overflow-hidden relative">
-                <Rocket className="w-4 h-4 mr-2 relative z-10 group-hover/btn:scale-110 transition-transform" />
-                <span className="relative z-10 font-body-normal-medium text-textwhite group-hover/btn:scale-105 transition-transform duration-300">
-                  Download Extension
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
-              </Button>
+              <a
+  href="https://chromewebstore.google.com/detail/funlingo-dual-subtitles-f/gjdpaicenfffjkgofmcjikilokigkonj?authuser=3&hl=en"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button className="bg-[linear-gradient(135deg,#7A1CAC_0%,#C642FC_100%)] h-12 px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 group/btn overflow-hidden relative">
+    <Rocket className="w-4 h-4 mr-2 relative z-10 group-hover/btn:scale-110 transition-transform" />
+    <span className="relative z-10 font-normal-heading text-textwhite group-hover/btn:scale-105 transition-transform duration-300">
+      Download Extension
+    </span>
+    <div className="absolute inset-0 bg-gradient-to-r from-[#C642FC] to-[#7A1CAC] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+  </Button>
+</a>
 
-              <Button className="bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] text-textwhite font-body-normal-medium h-12 px-8 py-3 rounded-lg border border-[#ffffff1a] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group">
+
+              <Button className="bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] text-textwhite font-normal-heading h-12 px-8 py-3 rounded-lg border border-[#ffffff1a] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group">
                 <Heart className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                 Share Feedback
               </Button>
@@ -380,7 +387,7 @@ export const About = (): React.JSX.Element => {
 
             {/* Social Proof */}
             <div
-              className="flex flex-wrap items-center justify-center gap-6 mt-8 font-body-small-regular text-textbody text-sm animate-fade-in-up"
+              className="flex flex-wrap items-center justify-center gap-6 mt-8 font-main-description text-textbody text-sm animate-fade-in-up"
               style={{ animationDelay: "400ms" }}
             >
               <div className="flex items-center gap-2">

@@ -84,14 +84,14 @@ export const FunlingoFeaturesSection = (): React.JSX.Element => {
         }`}
       >
         <Badge className="inline-flex items-center justify-center px-4 py-1.5 rounded-[99px] border border-solid border-[#ffffff1a] shadow-[inset_0px_-1px_4px_#00000040,inset_0px_0px_0px_#e5e5e8] bg-[linear-gradient(118deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)] h-auto hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 animate-fade-in-up">
-          <span className="font-body-xs-medium font-[number:var(--body-xs-medium-font-weight)] text-textwhite text-[length:var(--body-xs-medium-font-size)] tracking-[var(--body-xs-medium-letter-spacing)] leading-[var(--body-xs-medium-line-height)]">
+          <span className="font-main-description text-textwhite text-[length:var(--body-xs-medium-font-size)] tracking-[var(--body-xs-medium-letter-spacing)] leading-[var(--body-xs-medium-line-height)]">
             Funlingo Features
           </span>
         </Badge>
 
         <div className="flex flex-col max-w-full sm:max-w-[800px] items-center gap-4">
           <h2
-            className="font-heading-h3 font-[number:var(--heading-h3-font-weight)] text-textwhite text-2xl sm:text-3xl lg:text-4xl xl:text-[length:var(--heading-h3-font-size)] text-center tracking-[var(--heading-h3-letter-spacing)] leading-tight sm:leading-[var(--heading-h3-line-height)] [font-style:var(--heading-h3-font-style)] animate-fade-in-up"
+            className="font-main-heading text-textwhite text-2xl sm:text-3xl lg:text-4xl xl:text-[length:var(--heading-h3-font-size)] text-center tracking-[var(--heading-h3-letter-spacing)] leading-tight sm:leading-[var(--heading-h3-line-height)] animate-fade-in-up"
             style={{ animationDelay: "200ms" }}
           >
             Maximize Your Learning with
@@ -100,7 +100,7 @@ export const FunlingoFeaturesSection = (): React.JSX.Element => {
           </h2>
 
           <p
-            className="font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-textbody text-base sm:text-[length:var(--body-normal-regular-font-size)] text-center tracking-[var(--body-normal-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)] max-w-2xl animate-fade-in-up"
+            className="font-main-description text-textbody text-base sm:text-[length:var(--body-normal-regular-font-size)] text-center tracking-[var(--body-normal-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-normal-regular-line-height)] max-w-2xl animate-fade-in-up"
             style={{ animationDelay: "400ms" }}
           >
             Everything you need to learn a language naturally through the
@@ -189,7 +189,7 @@ export const FunlingoFeaturesSection = (): React.JSX.Element => {
                   ></div>
 
                   <h3
-                    className={`[font-family:'Inter',Helvetica] font-normal text-lg sm:text-xl tracking-[0] leading-7 transition-all duration-500 ${
+                    className={`font-normal-heading text-lg sm:text-xl tracking-[0] leading-7 transition-all duration-500 ${
                       index === activeFeature
                         ? "text-textwhite font-semibold"
                         : "text-textbody group-hover:text-textwhite"
@@ -200,7 +200,7 @@ export const FunlingoFeaturesSection = (): React.JSX.Element => {
                 </div>
 
                 <p
-                  className={`font-body-normal-regular font-[number:var(--body-normal-regular-font-weight)] text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-normal-regular-line-height)] [font-style:var(--body-normal-regular-font-style)] transition-all duration-500 ${
+                  className={`font-main-description text-[length:var(--body-normal-regular-font-size)] tracking-[var(--body-normal-regular-letter-spacing)] leading-relaxed sm:leading-[var(--body-normal-regular-line-height)] transition-all duration-500 ${
                     index === activeFeature
                       ? "text-textwhite"
                       : "text-textbody group-hover:text-textwhite"
@@ -233,10 +233,10 @@ export const FunlingoFeaturesSection = (): React.JSX.Element => {
               <div className="text-6xl sm:text-7xl lg:text-9xl transform transition-all duration-1000 group-hover:scale-110 group-hover:rotate-12">
                 {activeFeature === 0 ? "📚" : activeFeature === 1 ? "📊" : "🎤"}
               </div>
-              <h3 className="font-heading-h4 text-textwhite text-xl sm:text-2xl lg:text-[length:var(--heading-h4-font-size)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-700">
+              <h3 className="font-normal-heading text-textwhite text-xl sm:text-2xl lg:text-[length:var(--heading-h4-font-size)] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#C642FC] group-hover:to-[#7A1CAC] transition-all duration-700">
                 {features[activeFeature].title}
               </h3>
-              <p className="font-body-normal-regular text-textbody text-sm sm:text-[length:var(--body-normal-regular-font-size)] max-w-[300px] group-hover:text-textwhite transition-colors duration-700">
+              <p className="font-main-description text-textbody text-sm sm:text-[length:var(--body-normal-regular-font-size)] max-w-[300px] group-hover:text-textwhite transition-colors duration-700">
                 {features[activeFeature].description}
               </p>
             </div>

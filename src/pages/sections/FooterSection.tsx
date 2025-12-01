@@ -12,13 +12,12 @@ const quickLinks = [
 const informationLinks = [
   { label: "How It Works", href: "/#features" },
   { label: "Feedback", href: "/feedback" },
-  { label: "Download Extension", href: "#download" },
+  { label: "Download Extension", href: "https://chromewebstore.google.com/detail/funlingo-dual-subtitles-f/gjdpaicenfffjkgofmcjikilokigkonj?authuser=3&hl=en" },
 ];
 
 const followLinks = [
-  { label: "Twitter", href: "https://twitter.com/funlingo" },
-  { label: "Discord", href: "https://discord.gg/funlingo" },
-  { label: "GitHub", href: "https://github.com/funlingo" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/getfunlingo/" },
+  { label: "Instagram", href: "https://www.instagram.com/getfunlingo?igsh=MWVkcWQ5Nmh0YmZqdA==" },
 ];
 
 export const FooterSection = (): React.JSX.Element => {
@@ -59,7 +58,7 @@ export const FooterSection = (): React.JSX.Element => {
       >
         {/* Brand Section */}
         <div className="flex flex-col items-start gap-3 flex-1 max-w-sm animate-fade-in-up">
-          <div className="flex items-center justify-center w-fit mt-[-1.00px] bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,#C642FC_40%,#7A1CAC_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-transparent text-2xl sm:text-3xl lg:text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap [font-style:var(--heading-h5-font-style)] hover:scale-105 transition-transform duration-300 cursor-default">
+          <div className="flex items-center justify-center w-fit mt-[-1.00px] bg-[linear-gradient(135deg,rgba(255,255,255,0)_0%,#C642FC_40%,#7A1CAC_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] font-normal-heading text-transparent text-2xl sm:text-3xl lg:text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] whitespace-nowrap hover:scale-105 transition-transform duration-300 cursor-default">
             <img src={logo} alt="" width={170} />
           </div>
 
@@ -67,25 +66,28 @@ export const FooterSection = (): React.JSX.Element => {
           <div className="lg:hidden flex items-center gap-4 mt-4">
             {[
               {
-                icon: "🐦",
-                label: "Twitter",
-                href: "https://twitter.com/funlingo",
+                icon: (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                ),
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/company/getfunlingo/",
               },
               {
-                icon: "💬",
-                label: "Discord",
-                href: "https://discord.gg/funlingo",
-              },
-              {
-                icon: "💻",
-                label: "GitHub",
-                href: "https://github.com/funlingo",
+                icon: (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.042-3.441.219-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001 12.017 0z"/>
+                  </svg>
+                ),
+                label: "Instagram",
+                href: "https://www.instagram.com/getfunlingo?igsh=MWVkcWQ5Nmh0YmZqdA==",
               },
             ].map((social, index) => (
               <a
                 key={index}
                 href={social.href}
-                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.1)] border border-[#ffffff1a] flex items-center justify-center text-lg hover:scale-110 hover:bg-[rgba(255,255,255,0.2)] hover:border-[#ffffff33] transition-all duration-300 animate-fade-in-up"
+                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.1)] border border-[#ffffff1a] flex items-center justify-center text-white hover:scale-110 hover:bg-[rgba(255,255,255,0.2)] hover:border-[#ffffff33] transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${300 + index * 100}ms` }}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -104,7 +106,7 @@ export const FooterSection = (): React.JSX.Element => {
             className="flex flex-col items-start gap-4 animate-fade-in-up"
             style={{ animationDelay: "200ms" }}
           >
-            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#C642FC] hover:to-[#7A1CAC] transition-all duration-300">
+            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-normal-heading text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#C642FC] hover:to-[#7A1CAC] transition-all duration-300">
               Quick Links
             </h3>
 
@@ -113,7 +115,7 @@ export const FooterSection = (): React.JSX.Element => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textbody text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)] hover:text-textwhite transition-all duration-300 group/link relative overflow-hidden"
+                    className="flex items-center justify-center w-fit font-main-description text-textbody text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap hover:text-textwhite transition-all duration-300 group/link relative overflow-hidden"
                   >
                     <span className="relative z-10 group-hover/link:translate-x-1 transition-transform duration-300">
                       {link.label}
@@ -130,7 +132,7 @@ export const FooterSection = (): React.JSX.Element => {
             className="flex flex-col items-start gap-4 animate-fade-in-up"
             style={{ animationDelay: "400ms" }}
           >
-            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#C642FC] hover:to-[#7A1CAC] transition-all duration-300">
+            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-normal-heading text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#C642FC] hover:to-[#7A1CAC] transition-all duration-300">
               Information
             </h3>
 
@@ -139,7 +141,7 @@ export const FooterSection = (): React.JSX.Element => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="flex items-center justify-center w-fit font-body-normal-medium font-[number:var(--body-normal-medium-font-weight)] text-textbody text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap [font-style:var(--body-normal-medium-font-style)] hover:text-textwhite transition-all duration-300 group/link relative overflow-hidden"
+                    className="flex items-center justify-center w-fit font-main-description text-textbody text-[length:var(--body-normal-medium-font-size)] tracking-[var(--body-normal-medium-letter-spacing)] leading-[var(--body-normal-medium-line-height)] whitespace-nowrap hover:text-textwhite transition-all duration-300 group/link relative overflow-hidden"
                   >
                     <span className="relative z-10 group-hover/link:translate-x-1 transition-transform duration-300">
                       {link.label}
@@ -156,7 +158,7 @@ export const FooterSection = (): React.JSX.Element => {
             className="hidden lg:flex flex-col items-start gap-4 animate-fade-in-up"
             style={{ animationDelay: "600ms" }}
           >
-            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#C642FC] hover:to-[#7A1CAC] transition-all duration-300">
+            <h3 className="flex items-center justify-center w-fit mt-[-1.00px] font-normal-heading text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap group hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#C642FC] hover:to-[#7A1CAC] transition-all duration-300">
               Follow
             </h3>
 
@@ -164,7 +166,7 @@ export const FooterSection = (): React.JSX.Element => {
               {followLinks.map((link, index) => (
                 <li key={index}>
                   <a
-                    className="flex items-center justify-center w-fit [font-family:'Inter',Helvetica] font-medium text-textbody text-base tracking-[0] leading-[26px] whitespace-nowrap hover:text-textwhite transition-all duration-300 group/link relative overflow-hidden"
+                    className="flex items-center justify-center w-fit font-main-description text-textbody text-base tracking-[0] leading-[26px] whitespace-nowrap hover:text-textwhite transition-all duration-300 group/link relative overflow-hidden"
                     href={link.href}
                     rel="noopener noreferrer"
                     target="_blank"
@@ -188,16 +190,16 @@ export const FooterSection = (): React.JSX.Element => {
         }`}
       >
         <div className="flex flex-col items-center gap-4 p-6 rounded-2xl bg-[rgba(255,255,255,0.05)] border border-[#ffffff1a] backdrop-blur-sm w-full max-w-md">
-          <h3 className="font-body-small-medium text-textwhite text-center">
+          <h3 className="font-normal-heading text-textwhite text-center">
             Stay Updated with Funlingo
           </h3>
           <div className="flex gap-2 w-full">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-2 rounded-lg bg-[rgba(255,255,255,0.1)] border border-[#ffffff1a] text-textwhite placeholder-textbody focus:outline-none focus:border-[#C642FC] transition-colors duration-300"
+              className="flex-1 px-4 py-2 rounded-lg bg-[rgba(255,255,255,0.1)] border border-[#ffffff1a] text-textwhite placeholder-textbody focus:outline-none focus:border-[#C642FC] transition-colors duration-300 font-main-description"
             />
-            <button className="px-4 py-2 rounded-lg bg-[linear-gradient(135deg,#C642FC_0%,#7A1CAC_100%)] text-textwhite font-body-normal-medium hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300">
+            <button className="px-4 py-2 rounded-lg bg-[linear-gradient(135deg,#C642FC_0%,#7A1CAC_100%)] text-textwhite font-normal-heading hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300">
               Subscribe
             </button>
           </div>
@@ -210,7 +212,7 @@ export const FooterSection = (): React.JSX.Element => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <p className="flex items-center justify-center w-fit font-body-small-medium font-[number:var(--body-small-medium-font-weight)] text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap [font-style:var(--body-small-medium-font-style)] hover:scale-105 transition-transform duration-300 cursor-default">
+        <p className="flex items-center justify-center w-fit font-main-description text-textwhite text-[length:var(--body-small-medium-font-size)] tracking-[var(--body-small-medium-letter-spacing)] leading-[var(--body-small-medium-line-height)] whitespace-nowrap hover:scale-105 transition-transform duration-300 cursor-default">
           ©2025 Funlingo. All rights reserved.
         </p>
 
@@ -218,13 +220,13 @@ export const FooterSection = (): React.JSX.Element => {
         <div className="flex items-center gap-6">
           {[
             { label: "Privacy Policy", href: "/privacy-policy" },
-            { label: "Terms of Service", href: "/terms" },
+            { label: "Support", href: "/support" },
             { label: "Cookie Policy", href: "/cookies" },
           ].map((link, index) => (
             <a
               key={index}
               href={link.href}
-              className="font-body-small-regular text-textbody hover:text-textwhite transition-colors duration-300 text-sm"
+              className="font-main-description text-textbody hover:text-textwhite transition-colors duration-300 text-sm"
             >
               {link.label}
             </a>
